@@ -22,7 +22,7 @@
   <link rel="preload" href="fonts/Archivo-400-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/Gaegu-700-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/JetBrainsMono-400-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/main.css?v=7">
+  <link rel="stylesheet" href="css/main.css?v=9">
   
   
   <script type="application/ld+json">
@@ -54,8 +54,15 @@
   
   <header class="fixed-nav">
     <button type="button" id="menu-toggle" aria-haspopup="dialog" style="background:#0E0E10; border:0; cursor:pointer; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.14em; color:#F3F1EC; padding:8px 0;">
-      FLEUR ROSE · <span style="border-bottom:2px solid #FF8FC7; padding-bottom:2px">INDEX</span>
+      <span class="menu-bars-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></span>FLEUR ROSE · <span style="border-bottom:2px solid #FF8FC7; padding-bottom:2px">INDEX</span>
     </button>
+    <nav class="nav-desktop-links" aria-label="Primary navigation">
+      <a href="index.html#paintings" class="active-page-link" style="color:#FF8FC7; border-color:#FF8FC7;">PAINTINGS</a>
+      <a href="the-second-future.html">THE SECOND FUTURE</a>
+      <a href="photography.html">PHOTOGRAPHY</a>
+      <a href="everything-i-know-i-owe-to-others.html">EVERYTHING I KNOW</a>
+      <a href="pink-saigon.html">PINK SAIGON</a>
+    </nav>
     <nav aria-label="Language selection" style="display:flex; gap:4px;">
       <button type="button" class="lang-btn active" data-lang="en">EN</button>
       <button type="button" class="lang-btn" data-lang="fr">FR</button>
@@ -189,15 +196,16 @@
   <footer style="border-top:1px solid #2A2A2E; padding:28px clamp(22px, 4vw, 64px) 40px; display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px 32px; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.12em; color:#8E8C86;">
     <span>FLEUR ROSE · <a href="mailto:hello@fleurrose2am.com" style="color:#C9C6BE;">hello@fleurrose2am.com</a></span>
     <div style="display:flex; flex-wrap:wrap; gap:8px 20px;">
+      <a href="the-second-future.html" style="color:#8E8C86;">THE SECOND FUTURE</a>
       <a href="photography.html" style="color:#8E8C86;">PHOTOGRAPHY</a>
-      <a href="the-second-future.html" style="color:#FF8FC7;">THE SECOND FUTURE</a>
+      <a href="everything-i-know-i-owe-to-others.html" style="color:#8E8C86;">EVERYTHING I KNOW</a>
       <a href="pink-saigon.html" style="color:#8E8C86;">PINK SAIGON</a>
       <a href="legal.html" style="color:#8E8C86;">LEGAL NOTICE</a>
     </div>
   </footer>
 
   
-  <script src="js/i18n.js"></script>
+  <script src="js/i18n.js?v=8"></script>
   <script src="js/inquiry.js?v=6"></script>
   <script src="js/main.js?v=2"></script>
   <script>
@@ -226,18 +234,23 @@
           com: lang === 'fr' ? 'COMMANDE' : 'COMMISSIONED'
         };
         const statusText = statusMap[w.st] || w.st.toUpperCase();
+        const isFeatured = Boolean(w.commission);
+        const cardStyle = isFeatured
+          ? 'flex:1 1 100%; min-width:100%; max-width:100%; cursor:pointer; padding-bottom:clamp(24px, 4vh, 48px); border-bottom:1px solid #2A2A2E;'
+          : 'flex:1 1 clamp(260px, 28vw, 420px); min-width:min(100%, 260px); max-width:520px; cursor:pointer;';
+        const titleSize = isFeatured ? 'clamp(24px, 3vw, 38px)' : 'clamp(20px, 2vw, 26px)';
 
         return `
-          <div style="flex:1 1 clamp(260px, 28vw, 420px); min-width:min(100%, 260px); max-width:520px; cursor:pointer;" onclick="openArtworkModal(${idx})">
+          <div style="${cardStyle}" onclick="openArtworkModal(${idx})">
             <div style="display:flex; align-items:flex-start; gap:12px;">
               <span class="font-mono" style="font-size:11px; color:#8E8C86; padding-top:6px; flex:none;">${w.n}</span>
               <div style="min-width:0; flex:1;">
                 <div class="artwork-aspect-box" style="aspect-ratio:${w.ratio};">
-                  <img src="${w.src}" alt="${w.titre}" loading="lazy">
+                  <img src="${w.src}" alt="${w.titre}" loading="${isFeatured ? 'eager' : 'lazy'}">
                 </div>
                 <div style="margin-top:16px;">
                   <div style="display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;">
-                    <span class="font-hand" style="font-size:clamp(20px, 2vw, 26px); font-weight:700;">${w.titre}</span>
+                    <span class="font-hand" style="font-size:${titleSize}; font-weight:700;">${w.titre}</span>
                     <span class="font-mono" style="font-size:10px; letter-spacing:0.1em; border:1.5px solid #F3F1EC; padding:2px 7px;">${statusText}</span>
                   </div>
                   <div class="font-mono" style="font-size:11px; line-height:1.8; color:#8E8C86; margin-top:6px;">

@@ -1,4 +1,4 @@
-﻿
+
 
 const STORAGE_KEY = 'fleurrose-lang';
 let currentLang = 'en';
@@ -18,7 +18,7 @@ function getInitialLang() {
   } catch (e) {
     console.warn('Storage access restricted', e);
   }
-  return /^fr/i.test(navigator.language || '') ? 'fr' : 'en';
+  return 'en';
 }
 
 async function loadTranslations() {

@@ -19,7 +19,7 @@
   <link rel="preload" href="fonts/Archivo-400-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/Gaegu-700-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/JetBrainsMono-400-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/main.css?v=7">
+  <link rel="stylesheet" href="css/main.css?v=9">
   
   <script type="application/ld+json">
   {
@@ -47,8 +47,15 @@
   
   <header class="fixed-nav">
     <button type="button" id="menu-toggle" aria-haspopup="dialog" style="background:#0E0E10; border:0; cursor:pointer; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.14em; color:#F3F1EC; padding:8px 0;">
-      FLEUR ROSE · <span style="border-bottom:2px solid #FF8FC7; padding-bottom:2px">INDEX</span>
+      <span class="menu-bars-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></span>FLEUR ROSE · <span style="border-bottom:2px solid #FF8FC7; padding-bottom:2px">INDEX</span>
     </button>
+    <nav class="nav-desktop-links" aria-label="Primary navigation">
+      <a href="index.html#paintings">PAINTINGS</a>
+      <a href="the-second-future.html" class="active-page-link" style="color:#FF8FC7; border-color:#FF8FC7;">THE SECOND FUTURE</a>
+      <a href="photography.html">PHOTOGRAPHY</a>
+      <a href="everything-i-know-i-owe-to-others.html">EVERYTHING I KNOW</a>
+      <a href="pink-saigon.html">PINK SAIGON</a>
+    </nav>
     <div class="nav-right">
       <a href="#order" class="font-mono nav-secondary" style="font-size:11px; letter-spacing:0.14em; color:#8E8C86;" data-i18n="second_future.order_h">RESERVE</a>
       <nav aria-label="Language selection" style="display:flex; gap:4px;">
@@ -211,7 +218,7 @@
     </div>
   </footer>
 
-  <script src="js/i18n.js"></script>
+  <script src="js/i18n.js?v=8"></script>
   <script src="js/inquiry.js?v=6"></script>
   <script src="js/mockup.js"></script>
   <script src="js/main.js?v=2"></script>

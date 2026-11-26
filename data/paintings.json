@@ -1,6 +1,34 @@
 [
   {
     "n": "01",
+    "titre": "AUTOPORTRAIT DE L’HOMME QUI CHERCHE CE QUI EST EN LUI",
+    "annee": "2026",
+    "ratio": "1448/1086",
+    "st": "com",
+    "commission": true,
+    "src": "img/photographs/edited/paintings/autoportrait-in-situ.jpg",
+    "room": "",
+    "en": {
+      "tech": "Diptych, two canvases · commission for Réuni Smiles",
+      "dim": "120 cm high × 100 cm wide each · two canvases side by side",
+      "prix": "Commission",
+      "cadre": "Dimensions of the canvases, excluding spacing and framing",
+      "envoi": "Réuni Smiles",
+      "ship": "Commissioned work",
+      "note": ""
+    },
+    "fr": {
+      "tech": "Diptyque, deux toiles · commande pour Réuni Smiles",
+      "dim": "120 cm de haut × 100 cm de large chacune · deux toiles côte à côte",
+      "prix": "Commande",
+      "cadre": "Dimensions des toiles, hors espacement et encadrement",
+      "envoi": "Réuni Smiles",
+      "ship": "Œuvre de commande",
+      "note": ""
+    }
+  },
+  {
+    "n": "02",
     "titre": "UNNAMED",
     "annee": "2026",
     "ratio": "1180/994",
@@ -27,7 +55,7 @@
     }
   },
   {
-    "n": "02",
+    "n": "03",
     "titre": "ASCENSION I & II",
     "annee": "2026",
     "ratio": "1620/996",
@@ -54,7 +82,7 @@
     }
   },
   {
-    "n": "03",
+    "n": "04",
     "titre": "LABYRINTH OF A MIND",
     "annee": "2026",
     "ratio": "1140/1640",
@@ -81,7 +109,7 @@
     }
   },
   {
-    "n": "04",
+    "n": "05",
     "titre": "GRIFFURE PASSIONNELLE DANS MA NUIT NOIRE",
     "annee": "2026",
     "ratio": "1744/1264",
@@ -105,34 +133,6 @@
       "envoi": "coût et modalités confirmés par écrit",
       "ship": "Livraison sur devis",
       "note": "Peinture gestuelle noire et rose vif."
-    }
-  },
-  {
-    "n": "05",
-    "titre": "AUTOPORTRAIT DE L’HOMME QUI CHERCHE CE QUI EST EN LUI",
-    "annee": "2026",
-    "ratio": "1448/1086",
-    "st": "com",
-    "commission": true,
-    "src": "img/photographs/edited/paintings/autoportrait-in-situ.jpg",
-    "room": "",
-    "en": {
-      "tech": "Diptych, two canvases · commission for Réuni Smiles",
-      "dim": "120 cm high × 100 cm wide each · two canvases side by side",
-      "prix": "Commission",
-      "cadre": "Dimensions of the canvases, excluding spacing and framing",
-      "envoi": "Réuni Smiles",
-      "ship": "Commissioned work",
-      "note": ""
-    },
-    "fr": {
-      "tech": "Diptyque, deux toiles · commande pour Réuni Smiles",
-      "dim": "120 cm de haut × 100 cm de large chacune · deux toiles côte à côte",
-      "prix": "Commande",
-      "cadre": "Dimensions des toiles, hors espacement et encadrement",
-      "envoi": "Réuni Smiles",
-      "ship": "Œuvre de commande",
-      "note": ""
     }
   }
 ]
