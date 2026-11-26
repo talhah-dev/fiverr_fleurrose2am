@@ -1,0 +1,12 @@
+# Ignore tasks and handover files
+tasks/
+PROJECT_INSTRUCTIONS.md
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs and environment
+*.log
+.env

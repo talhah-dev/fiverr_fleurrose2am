@@ -1,0 +1,138 @@
+[
+  {
+    "n": "01",
+    "titre": "UNNAMED",
+    "annee": "2026",
+    "ratio": "1180/994",
+    "st": "av",
+    "src": "img/uploads/unnamed-front-wall.jpg",
+    "room": "img/photographs/edited/paintings/unnamed-in-situ.jpg",
+    "en": {
+      "tech": "Acrylic on canvas",
+      "dim": "65 × 81 cm",
+      "prix": "1 850 €",
+      "cadre": "Stretched canvas, painted edges · unframed",
+      "envoi": "shipped flat",
+      "ship": "Shipping included in France",
+      "note": "This one I painted crying. I have not touched it since."
+    },
+    "fr": {
+      "tech": "Acrylique sur toile",
+      "dim": "65 × 81 cm",
+      "prix": "1 850 €",
+      "cadre": "Toile sur châssis, bords peints · sans cadre",
+      "envoi": "expédiée à plat",
+      "ship": "Livraison incluse en France",
+      "note": "Celui-ci, je l’ai peint en pleurant. Je n’y ai plus touché depuis."
+    }
+  },
+  {
+    "n": "02",
+    "titre": "ASCENSION I & II",
+    "annee": "2026",
+    "ratio": "1620/996",
+    "st": "av",
+    "src": "img/uploads/ascension-front.jpg",
+    "room": "img/photographs/edited/paintings/ascension-in-situ.jpg",
+    "en": {
+      "tech": "Acrylic on canvas · diptych of two distinct works",
+      "dim": "81 × 65 cm each",
+      "prix": "1 550 € — the pair",
+      "cadre": "Indivisible pair · Framed, ready to hang",
+      "envoi": "flat-packed, two crates",
+      "ship": "Shipping included in France",
+      "note": "This one I shouted through. I think you can hear it."
+    },
+    "fr": {
+      "tech": "Acrylique sur toile · diptyque de deux œuvres distinctes",
+      "dim": "81 × 65 cm chacune",
+      "prix": "1 550 € — le diptyque",
+      "cadre": "Paire indissociable · Encadrée, prête à accrocher",
+      "envoi": "emballées à plat, deux caisses",
+      "ship": "Livraison incluse en France",
+      "note": "Celui-ci, je l’ai traversé en criant. Je crois qu’on l’entend."
+    }
+  },
+  {
+    "n": "03",
+    "titre": "LABYRINTH OF A MIND",
+    "annee": "2026",
+    "ratio": "1140/1640",
+    "st": "rq",
+    "src": "img/uploads/labyrinth-of-a-mind.jpg",
+    "room": "",
+    "en": {
+      "tech": "Mixed media on canvas: oil, acrylic and acrylic marker (Posca PC-5M, candy pink 051)",
+      "dim": "60 × 90 cm",
+      "prix": "Price on request",
+      "cadre": "Original, one of a kind",
+      "envoi": "cost and method confirmed in writing",
+      "ship": "Shipping quoted on request",
+      "note": "Pink calligraphy on a red ground: an accumulation of signs, forms and lines that build a personal language."
+    },
+    "fr": {
+      "tech": "Technique mixte sur toile : huile, acrylique et marqueur acrylique (Posca PC-5M, rose bonbon 051)",
+      "dim": "60 × 90 cm",
+      "prix": "Prix sur demande",
+      "cadre": "Œuvre originale, pièce unique",
+      "envoi": "coût et modalités confirmés par écrit",
+      "ship": "Livraison sur devis",
+      "note": "Calligraphie rose sur fond rouge : une accumulation de signes, de formes et de tracés qui composent un langage personnel."
+    }
+  },
+  {
+    "n": "04",
+    "titre": "GRIFFURE PASSIONNELLE DANS MA NUIT NOIRE",
+    "annee": "2026",
+    "ratio": "1744/1264",
+    "st": "soon",
+    "src": "img/uploads/griffure.jpg",
+    "room": "",
+    "en": {
+      "tech": "Acrylic on canvas",
+      "dim": "100 × 70 cm",
+      "prix": "Price on request",
+      "cadre": "Original, one of a kind",
+      "envoi": "cost and method confirmed in writing",
+      "ship": "Shipping quoted on request",
+      "note": "Gestural painting in black and vivid pink."
+    },
+    "fr": {
+      "tech": "Acrylique sur toile",
+      "dim": "100 × 70 cm",
+      "prix": "Prix sur demande",
+      "cadre": "Œuvre originale, pièce unique",
+      "envoi": "coût et modalités confirmés par écrit",
+      "ship": "Livraison sur devis",
+      "note": "Peinture gestuelle noire et rose vif."
+    }
+  },
+  {
+    "n": "05",
+    "titre": "AUTOPORTRAIT DE L’HOMME QUI CHERCHE CE QUI EST EN LUI",
+    "annee": "2026",
+    "ratio": "1448/1086",
+    "st": "com",
+    "commission": true,
+    "src": "img/photographs/edited/paintings/autoportrait-in-situ.jpg",
+    "room": "",
+    "en": {
+      "tech": "Diptych, two canvases · commission for Réuni Smiles",
+      "dim": "120 cm high × 100 cm wide each · two canvases side by side",
+      "prix": "Commission",
+      "cadre": "Dimensions of the canvases, excluding spacing and framing",
+      "envoi": "Réuni Smiles",
+      "ship": "Commissioned work",
+      "note": ""
+    },
+    "fr": {
+      "tech": "Diptyque, deux toiles · commande pour Réuni Smiles",
+      "dim": "120 cm de haut × 100 cm de large chacune · deux toiles côte à côte",
+      "prix": "Commande",
+      "cadre": "Dimensions des toiles, hors espacement et encadrement",
+      "envoi": "Réuni Smiles",
+      "ship": "Œuvre de commande",
+      "note": ""
+    }
+  }
+]

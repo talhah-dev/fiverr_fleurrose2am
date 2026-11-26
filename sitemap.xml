@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.fleurrose2am.com/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.fleurrose2am.com/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.fleurrose2am.com/?lang=fr"/>
+  </url>
+  <url>
+    <loc>https://www.fleurrose2am.com/the-second-future.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.fleurrose2am.com/the-second-future.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.fleurrose2am.com/the-second-future.html?lang=fr"/>
+  </url>
+  <url>
+    <loc>https://www.fleurrose2am.com/photography.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.fleurrose2am.com/photography.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.fleurrose2am.com/photography.html?lang=fr"/>
+  </url>
+  <url>
+    <loc>https://www.fleurrose2am.com/everything-i-know-i-owe-to-others.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.fleurrose2am.com/everything-i-know-i-owe-to-others.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.fleurrose2am.com/everything-i-know-i-owe-to-others.html?lang=fr"/>
+  </url>
+  <url>
+    <loc>https://www.fleurrose2am.com/pink-saigon.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.fleurrose2am.com/pink-saigon.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.fleurrose2am.com/pink-saigon.html?lang=fr"/>
+  </url>
+</urlset>
