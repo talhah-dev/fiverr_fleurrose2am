@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -19,7 +19,7 @@
   <link rel="preload" href="fonts/Archivo-400-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/Gaegu-700-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/JetBrainsMono-400-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/main.css?v=6">
+  <link rel="stylesheet" href="css/main.css?v=7">
 </head>
 <body style="background:#0E0E10; color:#F3F1EC;">
 
@@ -121,6 +121,15 @@
   </section>
 
   
+  <section id="archive" style="background:#F2C4D3; color:#0E0E10; padding:clamp(70px, 12vh, 140px) clamp(16px, 4vw, 64px); display:flex; flex-direction:column; gap:clamp(40px, 7vh, 80px); overflow:hidden;">
+    <div style="display:flex; flex-direction:column; gap:16px; max-width:1240px; margin:0 auto; width:100%;">
+      <span class="font-mono" style="font-size:11px; letter-spacing:0.16em; color:#55304A;">03 · THE ARCHIVE</span>
+      <h2 style="margin:0; font-weight:600; font-size:clamp(38px, 7vw, 120px); line-height:0.92; letter-spacing:-0.035em; max-width:12ch;">The people who taught me.</h2>
+    </div>
+    <div id="eik-polaroid-wall" aria-label="A wall of small Polaroids pinned on pink, seen from a distance." role="img" style="display:flex; flex-direction:column; gap:clamp(5px, 0.6vw, 9px); margin:0 calc(-1 * clamp(16px, 4vw, 64px)); overflow:hidden; user-select:none;"></div>
+    <p class="font-mono" style="margin:0 auto; width:100%; max-width:1240px; font-size:11.5px; letter-spacing:0.08em; color:#55304A;">Hundreds of evenings, one open door. The faces belong to those who were there.</p>
+  </section>
+
   <section style="padding:clamp(60px, 8vh, 100px) clamp(22px, 4vw, 64px); background:#17171A; border-top:1px solid #2A2A2E;">
     <div style="max-width:1100px; margin:0 auto; display:flex; flex-direction:column; gap:40px;">
       <div>
@@ -201,6 +210,25 @@
       window.addEventListener('scroll', onScroll, { passive: true });
       window.addEventListener('resize', onScroll);
       onScroll();
+
+      const wall = document.getElementById('eik-polaroid-wall');
+      if (wall) {
+        const ids = ['01','02','03','04','05','07','08','09','10','11','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34'];
+        const rowCount = 10;
+        let html = '';
+        for (let r = 0; r < rowCount; r++) {
+          const dir = r % 2 === 0 ? 'normal' : 'reverse';
+          const dur = 52 + (r * 7) % 34;
+          const shifted = ids.slice((r * 5) % ids.length).concat(ids.slice(0, (r * 5) % ids.length));
+          const doubled = shifted.concat(shifted);
+          const imgs = doubled.map(id => {
+            const rot = ((parseInt(id, 10) * 7 + r * 3) % 9 - 4).toFixed(1);
+            return `<img src="img/photographs/eikioto/mini/EIK-${id}.png" alt="" loading="lazy" draggable="false" style="display:block; width:clamp(18px, 1.9vw, 26px); height:auto; margin-right:clamp(5px, 0.5vw, 8px); transform:rotate(${rot}deg); pointer-events:none; box-shadow:0 6px 8px -5px rgba(80,20,45,0.5);">`;
+          }).join('');
+          html += `<div style="display:flex; width:max-content; animation:eikDrift ${dur}s linear infinite ${dir}; will-change:transform;">${imgs}</div>`;
+        }
+        wall.innerHTML = html;
+      }
     });
   </script>
 </body>

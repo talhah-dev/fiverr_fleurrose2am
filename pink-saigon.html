@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -13,22 +13,30 @@
   <meta property="og:url" content="https://www.fleurrose2am.com/pink-saigon.html">
   <meta property="og:type" content="website">
   
-  <meta name="theme-color" content="#0E0E10">
-    <link rel="preload" href="fonts/PermanentMarker-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <meta name="theme-color" content="#08070A">
+  <link rel="preload" href="fonts/PressStart2P-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/VT323-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/PermanentMarker-400-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/Archivo-400-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/Gaegu-700-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/JetBrainsMono-400-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/main.css?v=6">
+  <link rel="stylesheet" href="css/main.css?v=7">
 </head>
-<body style="background:#0E0E10; color:#F3F1EC;">
+<body style="background:#08070A; color:#F2EEF0; font-family:'VT323',monospace;">
 
-  
-  <header class="fixed-nav">
-    <button type="button" id="menu-toggle" aria-haspopup="dialog" style="background:#0E0E10; border:0; cursor:pointer; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.14em; color:#F3F1EC; padding:8px 0;">
-      FLEUR ROSE · <span style="border-bottom:2px solid #FF8FC7; padding-bottom:2px">INDEX</span>
+  <div id="ps-boot-overlay" style="position:fixed; inset:0; z-index:120; background:#4F44D7; padding:clamp(12px, 3vw, 46px); box-sizing:border-box; transition:opacity 380ms linear;">
+    <div style="width:100%; height:100%; background:#483AAA; box-sizing:border-box; padding:clamp(14px, 3vw, 42px); overflow:hidden; position:relative;">
+      <pre id="ps-boot-text" style="margin:0; font-family:'VT323',monospace; font-size:clamp(16px, 2.2vw, 28px); line-height:1.25; color:#9A90E8; white-space:pre-wrap; word-break:break-word;"></pre>
+      <button type="button" id="ps-boot-skip" style="position:absolute; right:clamp(12px, 2.4vw, 28px); bottom:clamp(12px, 2.4vw, 28px); background:transparent; border:2px solid #9A90E8; color:#9A90E8; font-family:'Press Start 2P',monospace; font-size:11px; letter-spacing:0.12em; padding:12px 16px; cursor:pointer; min-height:44px;">SKIP</button>
+    </div>
+  </div>
+
+  <header class="fixed-nav" style="background:rgba(8,7,10,0.92); border-bottom:1px solid #2A1C24;">
+    <button type="button" id="menu-toggle" aria-haspopup="dialog" style="background:#08070A; border:0; cursor:pointer; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.14em; color:#F2EEF0; padding:8px 0;">
+      FLEUR ROSE · <span style="border-bottom:2px solid #FF3E9A; padding-bottom:2px">INDEX</span>
     </button>
     <div class="nav-right">
-      <span class="font-mono nav-secondary" style="font-size:11px; letter-spacing:0.12em; color:#FF8FC7;">PINK SAIGON</span>
+      <span class="font-pixel nav-secondary" style="font-family:'Press Start 2P',monospace; font-size:10px; letter-spacing:0.12em; color:#FF3E9A;">PNKSGN</span>
       <nav aria-label="Language selection" style="display:flex; gap:4px;">
         <button type="button" class="lang-btn active" data-lang="en">EN</button>
         <button type="button" class="lang-btn" data-lang="fr">FR</button>
@@ -36,7 +44,6 @@
     </div>
   </header>
 
-  
   <div id="menu-overlay" class="menu-overlay" role="dialog" aria-modal="true" aria-label="Index">
     <div style="display:flex; justify-content:space-between; align-items:center; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.14em; color:#8E8C86;">
       <span>FLEUR ROSE · ART TO STAY ALIVE</span>
@@ -69,100 +76,100 @@
     </ol>
   </div>
 
-  
-  <section style="padding:clamp(80px, 10vh, 120px) clamp(22px, 4vw, 64px) 24px; max-width:1200px; margin:0 auto;">
-    <div id="boot-terminal" style="background:#17171A; border:1px solid #2A2A2E; padding:24px 28px; font-family:'JetBrains Mono',monospace; font-size:12px; line-height:1.7; color:#FF8FC7; border-radius:2px; min-height:155px; cursor:pointer; white-space:pre-wrap;">**** PINK SAIGON BASIC V2 ****
-64K RAM SYSTEM  38911 BASIC BYTES FREE
-
-READY.
-SYSTEM ONLINE · SAIGON / VIETNAM
-ART TO STAY ALIVE</div>
-  </section>
-
-  
-  <section style="padding:32px clamp(22px, 4vw, 64px) clamp(48px, 8vh, 96px); max-width:1200px; margin:0 auto; display:flex; flex-direction:column; gap:20px;">
-    <h1 class="font-marker" style="margin:0; font-size:clamp(36px, 6.5vw, 92px); line-height:0.98; color:#FF8FC7;">
-      PINK SAIGON
+  <section style="min-height:92vh; box-sizing:border-box; padding:clamp(90px, 12vh, 140px) clamp(20px, 5vw, 72px) 60px; max-width:1240px; margin:0 auto; display:flex; flex-direction:column; justify-content:center; gap:clamp(20px, 3.5vh, 38px);">
+    <h1 style="margin:0; font-family:'Press Start 2P',monospace; font-size:clamp(24px, 5.2vw, 76px); line-height:1.32; letter-spacing:0.02em; color:#F2EEF0;">
+      PINK<br>SAIGON
     </h1>
-    <p class="font-mono" style="margin:0; font-size:13px; letter-spacing:0.14em; color:#8E8C86;">
-      AN ONGOING CREATIVE PRACTICE &amp; LABEL FOUNDED BY FLEUR ROSE
-    </p>
-    <p style="margin:12px 0 0; font-size:clamp(17px, 1.8vw, 21px); line-height:1.7; color:#E2DFD8; max-width:54ch;">
-      Pink Saigon is a living, evolving ecosystem between contemporary fine art, street installation, objects, and social situations in Ho Chi Minh City. Not a corporate brand — an artistic quest for everyday beauty and connection.
-    </p>
+    <div style="font-family:'VT323',monospace; font-size:clamp(22px, 2.4vw, 32px); line-height:1.45; color:#FF8FC7; letter-spacing:0.04em;">
+      SYSTEM ONLINE<br>
+      SAIGON / VIETNAM<br>
+      2026 &mdash;
+    </div>
+    <div style="font-family:'VT323',monospace; font-size:clamp(22px, 2.5vw, 34px); line-height:1.3; letter-spacing:0.04em; color:#F2EEF0; max-width:34ch;">
+      THIS IS A LIVING PROJECT.<br>
+      SAIGON IS THE STUDIO.<br>
+      THE CITY IS THE GALLERY.<br>
+      <span style="color:#FF3E9A;">COME BACK. SOMETHING WILL HAVE CHANGED.</span>
+    </div>
+    <a href="#ps-index" style="font-family:'Press Start 2P',monospace; font-size:clamp(10px, 1.1vw, 13px); letter-spacing:0.16em; color:#FF3E9A; border:2px solid #FF3E9A; padding:16px 22px; align-self:flex-start; text-decoration:none; display:inline-flex; align-items:center; gap:10px;">
+      ENTER <span style="font-family:'VT323',monospace; font-size:1.5em; line-height:1;">&rarr;</span>
+    </a>
   </section>
 
-  
-  <section style="padding:0 clamp(22px, 4vw, 64px) clamp(80px, 12vh, 140px); max-width:1200px; margin:0 auto; display:flex; flex-direction:column; gap:36px;">
-    <span class="font-mono" style="font-size:11px; letter-spacing:0.16em; color:#8E8C86;">PROJECTS IN DEVELOPMENT · 2026</span>
-
-    
-    <article style="border:1px solid #2A2A2E; background:#121214; padding:32px; display:flex; flex-direction:column; gap:16px;">
-      <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:8px;">
-        <span class="font-mono" style="font-size:11px; color:#FF8FC7;">001 · URBAN INSTALLATION</span>
-        <span class="font-mono" style="font-size:11px; color:#8E8C86; border:1px solid #3A3A3F; padding:2px 6px;">IN DEVELOPMENT</span>
-      </div>
-      <h2 class="font-hand" style="margin:0; font-size:clamp(26px, 3.2vw, 38px); font-weight:700;">SAY IT</h2>
-      <p style="margin:0; font-size:16px; line-height:1.6; color:#C9C6BE; max-width:60ch;">
-        A rug, a parasol, two stools. A place on the pavement where strangers can sit down and talk.
-      </p>
-      <div class="font-mono" style="font-size:11px; color:#8E8C86; line-height:1.8; border-top:1px solid #2A2A2E; padding-top:12px;">
-        ARTIFACTS: TALK TO ME postcard, magnetic letter set.
-      </div>
-    </article>
-
-    
-    <article style="border:1px solid #2A2A2E; background:#121214; padding:32px; display:flex; flex-direction:column; gap:16px;">
-      <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:8px;">
-        <span class="font-mono" style="font-size:11px; color:#FF8FC7;">002 · PHOTOGRAPHY</span>
-        <span class="font-mono" style="font-size:11px; color:#8E8C86; border:1px solid #3A3A3F; padding:2px 6px;">IDEA</span>
-      </div>
-      <h2 class="font-hand" style="margin:0; font-size:clamp(26px, 3.2vw, 38px); font-weight:700;">100 STRANGERS</h2>
-      <p style="margin:0; font-size:16px; line-height:1.6; color:#C9C6BE; max-width:60ch;">
-        One hundred people met on the street. One frame each, nothing staged.
-      </p>
-      <div class="font-mono" style="font-size:11px; color:#8E8C86; line-height:1.8; border-top:1px solid #2A2A2E; padding-top:12px;">
-        ARTIFACTS: Numbered print series.
-      </div>
-    </article>
-
-    
-    <article style="border:1px solid #2A2A2E; background:#121214; padding:32px; display:flex; flex-direction:column; gap:16px;">
-      <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:8px;">
-        <span class="font-mono" style="font-size:11px; color:#FF8FC7;">003 · OBJECT / SCULPTURE</span>
-        <span class="font-mono" style="font-size:11px; color:#8E8C86; border:1px solid #3A3A3F; padding:2px 6px;">PROTOTYPE</span>
-      </div>
-      <h2 class="font-hand" style="margin:0; font-size:clamp(26px, 3.2vw, 38px); font-weight:700;">PINK STOOL</h2>
-      <p style="margin:0; font-size:16px; line-height:1.6; color:#C9C6BE; max-width:60ch;">
-        The Vietnamese plastic stool becomes an icon. Object, then sculpture, then character.
-      </p>
-      <div class="font-mono" style="font-size:11px; color:#8E8C86; line-height:1.8; border-top:1px solid #2A2A2E; padding-top:12px;">
-        ARTIFACTS: Miniature stool, pin, plush.
-      </div>
-    </article>
-
-    
-    <article style="border:1px solid #2A2A2E; background:#121214; padding:32px; display:flex; flex-direction:column; gap:16px;">
-      <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:8px;">
-        <span class="font-mono" style="font-size:11px; color:#FF8FC7;">004 · NOMADIC EXHIBITION</span>
-        <span class="font-mono" style="font-size:11px; color:#8E8C86; border:1px solid #3A3A3F; padding:2px 6px;">IN DEVELOPMENT</span>
-      </div>
-      <h2 class="font-hand" style="margin:0; font-size:clamp(26px, 3.2vw, 38px); font-weight:700;">COLLECTION NOMADE</h2>
-      <p style="margin:0; font-size:16px; line-height:1.6; color:#C9C6BE; max-width:60ch;">
-        Works placed temporarily in cafes, hotels and shared spaces. The venue becomes a micro-gallery.
-      </p>
-      <div class="font-mono" style="font-size:11px; color:#8E8C86; line-height:1.8; border-top:1px solid #2A2A2E; padding-top:12px;">
-        ARTIFACTS: Host card, exhibition poster.
-      </div>
-    </article>
+  <section style="padding:clamp(56px, 8vh, 100px) clamp(20px, 5vw, 72px); border-top:1px solid #2A1C24; max-width:1240px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap:40px 56px;">
+    <div style="display:flex; flex-direction:column; gap:16px;">
+      <div style="font-family:'Press Start 2P',monospace; font-size:11px; letter-spacing:0.14em; color:#D46A93;">[ 01 / WHAT IS THIS ]</div>
+      <p style="margin:0; font-family:'VT323',monospace; font-size:clamp(22px, 2.3vw, 30px); line-height:1.35; color:#F2EEF0;">Not a brand. Not a gallery. An art project living inside Saigon.</p>
+      <p style="margin:0; font-family:'VT323',monospace; font-size:clamp(20px, 1.9vw, 25px); line-height:1.45; color:#FF8FC7;">Ordinary objects are borrowed from the street, moved slightly, sometimes transformed, then put back into the real city.</p>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:16px;">
+      <div style="font-family:'Press Start 2P',monospace; font-size:11px; letter-spacing:0.14em; color:#D46A93;">[ 02 / METHOD ]</div>
+      <p style="margin:0; font-family:'Press Start 2P',monospace; font-size:clamp(16px, 2vw, 28px); line-height:1.45; color:#F2EEF0;">THE CITY<br>IS THE<br>STUDIO.</p>
+      <p style="margin:0; font-family:'VT323',monospace; font-size:clamp(20px, 1.9vw, 25px); line-height:1.45; color:#FF8FC7;">Studio, material, set, gallery and character at the same time. Every intervention is photographed, filmed, written down.</p>
+    </div>
   </section>
 
-  
-  <footer style="border-top:1px solid #2A2A2E; padding:28px clamp(22px, 4vw, 64px) 40px; display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px 32px; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.12em; color:#8E8C86;">
+  <section id="ps-index" style="padding:clamp(56px, 8vh, 100px) clamp(20px, 5vw, 72px) clamp(80px, 12vh, 140px); border-top:1px solid #2A1C24; max-width:1240px; margin:0 auto; display:flex; flex-direction:column; gap:28px;">
+    <div style="display:flex; flex-wrap:wrap; gap:12px 26px; align-items:baseline; justify-content:space-between; border-bottom:1px solid #2A1C24; padding-bottom:16px;">
+      <h2 style="margin:0; font-family:'Press Start 2P',monospace; font-size:clamp(14px, 1.6vw, 22px); letter-spacing:0.1em; color:#F2EEF0;">INDEX</h2>
+      <span style="font-family:'Press Start 2P',monospace; font-size:11px; letter-spacing:0.14em; color:#D46A93;">6 ENTRIES / SAIGON / 2026</span>
+    </div>
+
+    <div style="display:flex; flex-direction:column;">
+      <article style="display:flex; flex-wrap:wrap; gap:8px 20px; align-items:baseline; padding:20px 4px; border-bottom:1px solid #1C1318;">
+        <span style="font-family:'Press Start 2P',monospace; font-size:12px; color:#FF3E9A; letter-spacing:0.08em;">001</span>
+        <span style="font-family:'VT323',monospace; font-size:clamp(26px, 2.6vw, 34px); flex:1 1 220px; color:#F2EEF0;">SAY IT — <span style="color:#ACA6AE; font-size:0.82em;">A rug, a parasol, two stools on the pavement.</span></span>
+        <span style="font-family:'Press Start 2P',monospace; font-size:10px; letter-spacing:0.12em; color:#ACA6AE;">URBAN INSTALLATION</span>
+        <span style="font-family:'Press Start 2P',monospace; font-size:10px; letter-spacing:0.12em; color:#FF8FC7;">IN DEVELOPMENT</span>
+      </article>
+
+      <article style="display:flex; flex-wrap:wrap; gap:8px 20px; align-items:baseline; padding:20px 4px; border-bottom:1px solid #1C1318;">
+        <span style="font-family:'Press Start 2P',monospace; font-size:12px; color:#FF3E9A; letter-spacing:0.08em;">002</span>
+        <span style="font-family:'VT323',monospace; font-size:clamp(26px, 2.6vw, 34px); flex:1 1 220px; color:#F2EEF0;">100 STRANGERS — <span style="color:#ACA6AE; font-size:0.82em;">One hundred people met on the street.</span></span>
+        <span style="font-family:'Press Start 2P',monospace; font-size:10px; letter-spacing:0.12em; color:#ACA6AE;">PHOTOGRAPHY</span>
+        <span style="font-family:'Press Start 2P',monospace; font-size:10px; letter-spacing:0.12em; color:#FF8FC7;">IDEA</span>
+      </article>
+
+      <article style="display:flex; flex-wrap:wrap; gap:8px 20px; align-items:baseline; padding:20px 4px; border-bottom:1px solid #1C1318;">
+        <span style="font-family:'Press Start 2P',monospace; font-size:12px; color:#FF3E9A; letter-spacing:0.08em;">003</span>
+        <span style="font-family:'VT323',monospace; font-size:clamp(26px, 2.6vw, 34px); flex:1 1 220px; color:#F2EEF0;">PINK STOOL — <span style="color:#ACA6AE; font-size:0.82em;">The Vietnamese plastic stool becomes an icon.</span></span>
+        <span style="font-family:'Press Start 2P',monospace; font-size:10px; letter-spacing:0.12em; color:#ACA6AE;">SCULPTURE</span>
+        <span style="font-family:'Press Start 2P',monospace; font-size:10px; letter-spacing:0.12em; color:#FF8FC7;">PROTOTYPE</span>
+      </article>
+
+      <article style="display:flex; flex-wrap:wrap; gap:8px 20px; align-items:baseline; padding:20px 4px; border-bottom:1px solid #1C1318;">
+        <span style="font-family:'Press Start 2P',monospace; font-size:12px; color:#FF3E9A; letter-spacing:0.08em;">004</span>
+        <span style="font-family:'VT323',monospace; font-size:clamp(26px, 2.6vw, 34px); flex:1 1 220px; color:#F2EEF0;">COLLECTION NOMADE — <span style="color:#ACA6AE; font-size:0.82em;">Works in cafes, hotels and shared spaces.</span></span>
+        <span style="font-family:'Press Start 2P',monospace; font-size:10px; letter-spacing:0.12em; color:#ACA6AE;">NOMADIC EXHIBITION</span>
+        <span style="font-family:'Press Start 2P',monospace; font-size:10px; letter-spacing:0.12em; color:#FF8FC7;">IN DEVELOPMENT</span>
+      </article>
+
+      <article style="display:flex; flex-wrap:wrap; gap:8px 20px; align-items:baseline; padding:20px 4px; border-bottom:1px solid #1C1318;">
+        <span style="font-family:'Press Start 2P',monospace; font-size:12px; color:#FF3E9A; letter-spacing:0.08em;">005</span>
+        <span style="font-family:'VT323',monospace; font-size:clamp(26px, 2.6vw, 34px); flex:1 1 220px; color:#F2EEF0;">CHEESECAKE ATM — <span style="color:#ACA6AE; font-size:0.82em;">A retro-futuristic machine that gives you a cheesecake.</span></span>
+        <span style="font-family:'Press Start 2P',monospace; font-size:10px; letter-spacing:0.12em; color:#ACA6AE;">INSTALLATION</span>
+        <span style="font-family:'Press Start 2P',monospace; font-size:10px; letter-spacing:0.12em; color:#FF8FC7;">IDEA</span>
+      </article>
+
+      <article style="display:flex; flex-wrap:wrap; gap:8px 20px; align-items:baseline; padding:20px 4px; border-bottom:1px solid #1C1318;">
+        <span style="font-family:'Press Start 2P',monospace; font-size:12px; color:#FF3E9A; letter-spacing:0.08em;">014</span>
+        <span style="font-family:'VT323',monospace; font-size:clamp(26px, 2.6vw, 34px); flex:1 1 220px; color:#F2EEF0;">REMAIN FROM THE FUTURE 2 — <span style="color:#ACA6AE; font-size:0.82em;">Life-size cut-outs placed back in the street.</span></span>
+        <span style="font-family:'Press Start 2P',monospace; font-size:10px; letter-spacing:0.12em; color:#ACA6AE;">INSTALLATION</span>
+        <span style="font-family:'Press Start 2P',monospace; font-size:10px; letter-spacing:0.12em; color:#FF8FC7;">IN DEVELOPMENT</span>
+      </article>
+    </div>
+
+    <div style="margin-top:20px; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:20px;">
+      <p style="margin:0; font-family:'VT323',monospace; font-size:22px; color:#ACA6AE; max-width:46ch;">Numbers are not chronological. Gaps are intentional — some entries are not public yet.</p>
+      <a href="mailto:hello@fleurrose2am.com?subject=Pink%20Saigon%20—%20Commission%20or%20Collaboration" style="font-family:'Press Start 2P',monospace; font-size:11px; letter-spacing:0.12em; color:#FF3E9A; border:2px solid #FF3E9A; padding:14px 20px; text-decoration:none;">COLLABORATE &rarr;</a>
+    </div>
+  </section>
+
+  <footer style="border-top:1px solid #2A1C24; padding:28px clamp(22px, 4vw, 64px) 40px; display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px 32px; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.12em; color:#8E8C86;">
     <span>FLEUR ROSE · <a href="mailto:hello@fleurrose2am.com" style="color:#C9C6BE;">hello@fleurrose2am.com</a></span>
     <div style="display:flex; flex-wrap:wrap; gap:8px 20px;">
       <a href="index.html" style="color:#8E8C86;">PAINTINGS</a>
-      <a href="the-second-future.html" style="color:#FF8FC7;">THE SECOND FUTURE</a>
+      <a href="the-second-future.html" style="color:#8E8C86;">THE SECOND FUTURE</a>
       <a href="photography.html" style="color:#8E8C86;">PHOTOGRAPHY</a>
       <a href="legal.html" style="color:#8E8C86;">LEGAL NOTICE</a>
     </div>
@@ -173,69 +180,70 @@ ART TO STAY ALIVE</div>
   <script src="js/main.js?v=2"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const box = document.getElementById('boot-terminal');
-      if (!box) return;
+      const overlay = document.getElementById('ps-boot-overlay');
+      const pre = document.getElementById('ps-boot-text');
+      const skipBtn = document.getElementById('ps-boot-skip');
+      if (!overlay || !pre) return;
+
       const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      const lines = [
-        { text: '**** PINK SAIGON BASIC V2 ****', color: '#FF8FC7' },
-        { text: '64K RAM SYSTEM  38911 BASIC BYTES FREE', color: '#8E8C86' },
-        { text: '', color: '#FF8FC7' },
-        { text: 'READY.', color: '#FF8FC7' },
-        { text: 'LOAD"PNKSGN",8,1', color: '#F3F1EC' },
-        { text: 'SEARCHING FOR PNKSGN', color: '#8E8C86' },
-        { text: 'SYSTEM ONLINE · SAIGON / VIETNAM', color: '#F3F1EC' },
-        { text: 'ART TO STAY ALIVE', color: '#FF8FC7' }
+      const bootLines = [
+        '    **** PINK SAIGON BASIC V2 ****',
+        '',
+        ' 64K RAM SYSTEM  38911 BASIC BYTES FREE',
+        '',
+        'READY.',
+        'LOAD"PNKSGN",8,1',
+        '',
+        'SEARCHING FOR PNKSGN',
+        'LOADING',
+        'READY.',
+        'RUN',
+        '',
+        'SYSTEM ONLINE',
+        'SAIGON / VIETNAM',
+        '',
+        'ART TO STAY ALIVE',
+        '',
+        'READY.'
       ];
 
-      function renderInstant() {
-        box.innerHTML = lines.map(l => `<div style="color:${l.color}">${l.text || '&nbsp;'}</div>`).join('') + '<span class="terminal-cursor"></span>';
-        box.style.cursor = 'default';
+      let done = false;
+      let timer = null;
+
+      function finishBoot() {
+        if (done) return;
+        done = true;
+        if (timer) clearTimeout(timer);
+        overlay.style.opacity = '0';
+        overlay.style.pointerEvents = 'none';
+        setTimeout(() => {
+          overlay.style.display = 'none';
+        }, 400);
       }
 
       if (reduce) {
-        renderInstant();
+        overlay.style.display = 'none';
         return;
       }
 
-      box.innerHTML = '';
-      let lineIdx = 0;
-      let charIdx = 0;
-      let timer = null;
-      let currentDiv = null;
-      const cursor = document.createElement('span');
-      cursor.className = 'terminal-cursor';
+      if (skipBtn) skipBtn.addEventListener('click', finishBoot);
+      overlay.addEventListener('click', finishBoot);
 
-      const skip = () => {
-        if (timer) clearTimeout(timer);
-        renderInstant();
-      };
-      box.addEventListener('click', skip, { once: true });
-
-      function step() {
-        if (lineIdx >= lines.length) {
-          box.style.cursor = 'default';
+      const fullText = bootLines.join('\n');
+      let idx = 0;
+      function typeNext() {
+        if (done) return;
+        if (idx >= fullText.length) {
+          timer = setTimeout(finishBoot, 450);
           return;
         }
-        const item = lines[lineIdx];
-        if (charIdx === 0) {
-          currentDiv = document.createElement('div');
-          currentDiv.style.color = item.color;
-          box.appendChild(currentDiv);
-          currentDiv.appendChild(cursor);
-        }
-        if (charIdx < item.text.length) {
-          cursor.insertAdjacentText('beforebegin', item.text[charIdx]);
-          charIdx++;
-          timer = setTimeout(step, 14);
-        } else {
-          if (item.text.length === 0) currentDiv.innerHTML = '&nbsp;';
-          lineIdx++;
-          charIdx = 0;
-          timer = setTimeout(step, 90);
-        }
+        pre.textContent += fullText[idx++];
+        const ch = fullText[idx - 1];
+        const delay = ch === '\n' ? 45 : 9;
+        timer = setTimeout(typeNext, delay);
       }
 
-      timer = setTimeout(step, 200);
+      timer = setTimeout(typeNext, 180);
     });
   </script>
 </body>

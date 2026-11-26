@@ -357,6 +357,11 @@ a:hover {
   50%, 100% { opacity: 0; }
 }
 
+@keyframes eikDrift {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
 .terminal-cursor {
   display: inline-block;
   width: 0.6em;
@@ -453,6 +458,9 @@ a:hover {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  [style*="eikDrift"] {
+    animation: none !important;
+  }
   * {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
