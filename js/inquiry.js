@@ -56,7 +56,9 @@ function createInquiryModal() {
           <div id="inq-modal-kicker" class="font-mono" style="font-size:10.5px; letter-spacing:0.16em; color:#FF8FC7;">FLEUR ROSE · DIRECT INQUIRY</div>
           <h2 id="inq-modal-title" class="font-marker" style="margin:6px 0 0; font-size:clamp(24px, 3.2vw, 34px); line-height:1.05; color:#F3F1EC;">TALK TO ME</h2>
         </div>
-        <button type="button" id="inq-modal-close" class="font-mono" style="background:none; border:0; color:#8E8C86; font-size:11px; letter-spacing:0.14em; cursor:pointer; padding:6px;">CLOSE ✕</button>
+        <button type="button" id="inq-modal-close" aria-label="Close" style="background:none; border:0; color:#8E8C86; cursor:pointer; padding:6px; display:inline-flex; align-items:center; justify-content:center; flex-shrink:0;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
       </div>
 
       <form id="inq-modal-form" style="display:flex; flex-direction:column; gap:14px;">
@@ -86,11 +88,13 @@ function createInquiryModal() {
 
         <div id="inq-form-status" class="font-mono" style="display:none; font-size:11.5px; line-height:1.6; padding:12px; border:1px solid #2A2A2E;"></div>
 
-        <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:12px; margin-top:4px;">
+        <div class="inquiry-actions">
           <button type="submit" id="inq-submit-btn" class="inquiry-btn-submit">SEND MESSAGE &rarr;</button>
           <button type="button" id="inq-copy-fallback" class="font-mono" title="Copy email address" aria-label="Copy hello@fleurrose2am.com" style="background:none; border:0; border-bottom:1px solid #5A5851; color:#8E8C86; font-size:11px; letter-spacing:0.06em; cursor:pointer; padding:4px 0; display:inline-flex; align-items:center; gap:7px;">
             <span>hello@fleurrose2am.com</span>
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            <span id="inq-copy-icon" style="display:inline-flex; align-items:center;">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            </span>
           </button>
         </div>
       </form>
@@ -107,7 +111,20 @@ function createInquiryModal() {
 
   document.getElementById('inq-modal-close').addEventListener('click', closeInquiryModal);
   document.getElementById('inq-success-close').addEventListener('click', closeInquiryModal);
-  document.getElementById('inq-copy-fallback').addEventListener('click', copyEmailToClipboard);
+  document.getElementById('inq-copy-fallback').addEventListener('click', () => {
+    copyEmailToClipboard();
+    const iconWrap = document.getElementById('inq-copy-icon');
+    const copyBtn = document.getElementById('inq-copy-fallback');
+    if (iconWrap) {
+      const originalSvg = iconWrap.innerHTML;
+      iconWrap.innerHTML = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF8FC7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+      if (copyBtn) copyBtn.style.color = '#FF8FC7';
+      setTimeout(() => {
+        iconWrap.innerHTML = originalSvg;
+        if (copyBtn) copyBtn.style.color = '#8E8C86';
+      }, 2400);
+    }
+  });
 
   modal.addEventListener('click', (e) => {
     if (e.target === modal) closeInquiryModal();
@@ -126,7 +143,7 @@ function updateModalLanguage(subjectText) {
   const isFr = window.I18N && window.I18N.getLang() === 'fr';
   document.getElementById('inq-modal-kicker').textContent = isFr ? 'FLEUR ROSE · DEMANDE DIRECTE' : 'FLEUR ROSE · DIRECT INQUIRY';
   document.getElementById('inq-modal-title').textContent = isFr ? 'ÉCRIRE À FLEUR ROSE' : 'TALK TO ME';
-  document.getElementById('inq-modal-close').textContent = isFr ? 'FERMER ✕' : 'CLOSE ✕';
+  document.getElementById('inq-modal-close').setAttribute('aria-label', isFr ? 'Fermer' : 'Close');
   document.getElementById('inq-lbl-subject').textContent = isFr ? 'OBJET / ŒUVRE' : 'SUBJECT / ARTWORK';
   document.getElementById('inq-lbl-name').textContent = isFr ? 'VOTRE NOM' : 'YOUR NAME';
   document.getElementById('inq-lbl-email').textContent = isFr ? 'VOTRE E-MAIL' : 'YOUR EMAIL';

@@ -136,7 +136,24 @@ a:hover {
   border-color: #FF8FC7 !important;
 }
 
+.inquiry-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  margin-top: 4px;
+}
+
 @media (max-width: 640px) {
+  .inquiry-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  .inquiry-btn-submit {
+    width: 100%;
+    text-align: center;
+  }
   .eik-kicker {
     display: none !important;
   }
