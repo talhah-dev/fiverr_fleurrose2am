@@ -1,6 +1,6 @@
 ﻿[
     {
-        "n":  "02",
+        "n":  "01",
         "slug":  "between-the-giants",
         "file":  "FR-PH-02_between-the-giants.jpg",
         "src":  "img/photographs/edited/2400/FR-PH-02_between-the-giants.jpg",
@@ -15,7 +15,7 @@
         "story_fr":  "Tout, autour d’elle, a été bâti pour durer. Pourtant, la plus petite chose de la photographie était celle qui vivait."
     },
     {
-        "n":  "06",
+        "n":  "02",
         "slug":  "a-thousand-little-suns",
         "file":  "FR-PH-06_a-thousand-little-suns.jpg",
         "src":  "img/photographs/edited/2400/FR-PH-06_a-thousand-little-suns.jpg",
@@ -30,7 +30,7 @@
         "story_fr":  "Chaque lumière voulait être vue. Quelque part dans ce bruit, j’ai découvert la beauté d’être anonyme."
     },
     {
-        "n":  "08",
+        "n":  "03",
         "slug":  "the-street-that-remembers",
         "file":  "FR-PH-08_the-street-that-remembers.jpg",
         "src":  "img/photographs/edited/2400/FR-PH-08_the-street-that-remembers.jpg",
@@ -45,7 +45,97 @@
         "story_fr":  "Certaines villes avancent. D’autres laissent le passé voyager à nos côtés."
     },
     {
-        "n":  "13",
+        "n":  "04",
+        "slug":  "a-moment-of-reflection",
+        "file":  "FR-PH-29_a-moment-of-reflection.jpg",
+        "src":  "img/photographs/edited/2400/FR-PH-29_a-moment-of-reflection.jpg",
+        "title":  "A MOMENT OF REFLECTION",
+        "alt":  "Two goats standing apart on a canal bank, mirrored in the water, against a lichen-covered brick wall",
+        "place_en":  "Netherlands",
+        "place_fr":  "Pays-Bas",
+        "year":  "2010",
+        "vertical":  false,
+        "ratio":  "4/3",
+        "story_en":  "Two goats, each on its own little pedestal, looking away from each other. Only the water brought them together.",
+        "story_fr":  "Deux chèvres, chacune sur son petit piédestal, qui ne se regardent pas. Seule l\u0027eau les a réunies."
+    },
+    {
+        "n":  "05",
+        "slug":  "somewhere-between-darwin-and-broome",
+        "file":  "FR-PH-30_somewhere-between-darwin-and-broome.jpg",
+        "src":  "img/photographs/edited/2400/FR-PH-30_somewhere-between-darwin-and-broome.jpg",
+        "title":  "SOMEWHERE BETWEEN DARWIN AND BROOME",
+        "alt":  "A full moon rising over silhouetted bush and tall grasses in a pink dusk sky",
+        "place_en":  "Western Australia",
+        "place_fr":  "Australie-Occidentale",
+        "year":  "2009",
+        "vertical":  false,
+        "ratio":  "4/3",
+        "story_en":  "Hours of empty road. Then the moon came up, and nowhere became a place to stop.",
+        "story_fr":  "Des heures de route vide. Puis la lune s\u0027est levée, et ce nulle part est devenu un endroit où s\u0027arrêter."
+    },
+    {
+        "n":  "06",
+        "slug":  "in-barcelona-we-learned-to-trust",
+        "file":  "FR-PH-31_in-barcelona-we-learned-to-trust.jpg",
+        "src":  "img/photographs/edited/2400/FR-PH-31_in-barcelona-we-learned-to-trust.jpg",
+        "title":  "IN BARCELONA, WE LEARNED TO TRUST",
+        "alt":  "A forest of TV antennas on Barcelona rooftops at sunset",
+        "place_en":  "Barcelona, Spain",
+        "place_fr":  "Barcelone, Espagne",
+        "year":  "2015",
+        "vertical":  false,
+        "ratio":  "4/3",
+        "story_en":  "Every roof was listening for something. Up there, among the antennas, I learned to trust what I could not see.",
+        "story_fr":  "Chaque toit écoutait quelque chose. Là-haut, parmi les antennes, j\u0027ai appris à faire confiance à ce que je ne voyais pas."
+    },
+    {
+        "n":  "07",
+        "slug":  "do-me-a-favor",
+        "file":  "FR-PH-32_do-me-a-favor.jpg",
+        "src":  "img/photographs/edited/2400/FR-PH-32_do-me-a-favor.jpg",
+        "title":  "DO ME A FAVOR",
+        "alt":  "Rows of colourful lucha libre wrestling masks hanging on a market stall",
+        "place_en":  "USA",
+        "place_fr":  "États-Unis",
+        "year":  "2010",
+        "vertical":  false,
+        "ratio":  "4/3",
+        "story_en":  "A wall of faces, and not one of them real. Here, a mask does not hide who you are. It is who you become.",
+        "story_fr":  "Un mur de visages, et pas un seul de vrai. Ici, le masque ne cache pas qui l\u0027on est. Il est ce que l\u0027on devient."
+    },
+    {
+        "n":  "08",
+        "slug":  "from-up-here-everything-is-quiet",
+        "file":  "FR-PH-33_from-up-here-everything-is-quiet.jpg",
+        "src":  "img/photographs/edited/2400/FR-PH-33_from-up-here-everything-is-quiet.jpg",
+        "title":  "FROM UP HERE, EVERYTHING IS QUIET",
+        "alt":  "Alfama rooftops and the white dome of the National Pantheon, Lisbon, framed by columns and bougainvillea",
+        "place_en":  "Lisbon, Portugal",
+        "place_fr":  "Lisbonne, Portugal",
+        "year":  "2010",
+        "vertical":  false,
+        "ratio":  "4/3",
+        "story_en":  "From up here, the city looks finished. Down there, it is still being lived.",
+        "story_fr":  "D\u0027ici, la ville semble achevée. En bas, on est encore en train de la vivre."
+    },
+    {
+        "n":  "09",
+        "slug":  "what-we-offer-to-the-day",
+        "file":  "FR-PH-34_what-we-offer-to-the-day.jpg",
+        "src":  "img/photographs/edited/2400/FR-PH-34_what-we-offer-to-the-day.jpg",
+        "title":  "WHAT WE OFFER TO THE DAY",
+        "alt":  "Balinese palm-leaf offerings with burning incense on a stone wall above rice terraces",
+        "place_en":  "Bali, Indonesia",
+        "place_fr":  "Bali, Indonésie",
+        "year":  "2010",
+        "vertical":  false,
+        "ratio":  "4/3",
+        "story_en":  "Every morning, someone makes a small gift for the day, knowing it will not last. The smoke rises anyway.",
+        "story_fr":  "Chaque matin, quelqu\u0027un fait un petit cadeau à la journée, en sachant qu\u0027il ne durera pas. La fumée monte quand même."
+    },
+    {
+        "n":  "10",
         "slug":  "the-sky-held-its-breath",
         "file":  "FR-PH-13_the-sky-held-its-breath.jpg",
         "src":  "img/photographs/edited/2400/FR-PH-13_the-sky-held-its-breath.jpg",
@@ -60,7 +150,7 @@
         "story_fr":  "Une lanterne rouge, et tout ce ciel autour. Le cadre n’avait besoin de rien d’autre."
     },
     {
-        "n":  "22",
+        "n":  "11",
         "slug":  "an-unfinished-conversation",
         "file":  "FR-PH-22_an-unfinished-conversation.jpg",
         "src":  "img/photographs/edited/2400/FR-PH-22_an-unfinished-conversation.jpg",
@@ -75,7 +165,7 @@
         "story_fr":  "Elles se sont arrêtées et m’ont regardée.\nPendant une seconde, la conversation s’est faite à trois.\nElle ne s’est jamais vraiment terminée."
     },
     {
-        "n":  "09",
+        "n":  "12",
         "slug":  "our-flags-were-drying",
         "file":  "FR-PH-09_our-flags-were-drying.jpg",
         "src":  "img/photographs/edited/2400/FR-PH-09_our-flags-were-drying.jpg",
@@ -90,7 +180,7 @@
         "story_fr":  "Personne n’a étendu ce linge pour faire quelque chose de beau. La beauté n’a jamais attendu de permission."
     },
     {
-        "n":  "10",
+        "n":  "13",
         "slug":  "the-value-of-what-remains",
         "file":  "FR-PH-10_the-value-of-what-remains.jpg",
         "src":  "img/photographs/edited/2400/FR-PH-10_the-value-of-what-remains.jpg",
@@ -105,7 +195,7 @@
         "story_fr":  "Ce qui m’intéressait, ce n’était pas ce qui avait été offert, mais ce qui restait."
     },
     {
-        "n":  "11",
+        "n":  "14",
         "slug":  "the-last-light-belongs-to-no-one",
         "file":  "FR-PH-11_the-last-light-belongs-to-no-one.jpg",
         "src":  "img/photographs/edited/2400/FR-PH-11_the-last-light-belongs-to-no-one.jpg",
@@ -120,7 +210,7 @@
         "story_fr":  "Pendant quelques secondes, le monde entier a semblé retenir son souffle."
     },
     {
-        "n":  "12",
+        "n":  "15",
         "slug":  "blue-interrupted",
         "file":  "FR-PH-12_blue-interrupted.jpg",
         "src":  "img/photographs/edited/2400/FR-PH-12_blue-interrupted.jpg",
@@ -135,7 +225,7 @@
         "story_fr":  "Un instant, le ciel entier a semblé dessiné d’un seul trait.\nRien n’est resté. Sauf la photographie."
     },
     {
-        "n":  "15",
+        "n":  "16",
         "slug":  "the-cat-knew",
         "file":  "FR-PH-15_the-cat-knew.jpg",
         "src":  "img/photographs/edited/2400/FR-PH-15_the-cat-knew.jpg",
@@ -150,7 +240,7 @@
         "story_fr":  "Il n’a pas bougé, il n’a pas détourné les yeux. De nous deux, c’était lui qui était chez lui."
     },
     {
-        "n":  "16",
+        "n":  "17",
         "slug":  "everybody-is-going-somewhere",
         "file":  "FR-PH-16_everybody-is-going-somewhere.jpg",
         "src":  "img/photographs/edited/2400/FR-PH-16_everybody-is-going-somewhere.jpg",
@@ -165,7 +255,7 @@
         "story_fr":  "Je n’ai gardé que leurs pas. Chacun allait vers une vie que je ne connaîtrai jamais."
     },
     {
-        "n":  "19",
+        "n":  "18",
         "slug":  "an-offering-to-the-day",
         "file":  "FR-PH-19_an-offering-to-the-day.jpg",
         "src":  "img/photographs/edited/2400/FR-PH-19_an-offering-to-the-day.jpg",
@@ -180,7 +270,7 @@
         "story_fr":  "Certains gestes se répètent chaque matin, pour personne en particulier. Celui-ci est resté."
     },
     {
-        "n":  "20",
+        "n":  "19",
         "slug":  "the-tree-kept-the-sun",
         "file":  "FR-PH-20_the-tree-kept-the-sun.jpg",
         "src":  "img/photographs/edited/2400/FR-PH-20_the-tree-kept-the-sun.jpg",
@@ -195,7 +285,7 @@
         "story_fr":  "Le soleil s’est couché derrière lui. Un instant, l’arbre a semblé retenir ce qui restait."
     },
     {
-        "n":  "00",
+        "n":  "20",
         "slug":  "saigonese-motorbike-fever",
         "file":  "FR-PH-00_saigonese-motorbike-fever.jpg",
         "src":  "img/photographs/edited/2400/FR-PH-00_saigonese-motorbike-fever.jpg",
@@ -210,7 +300,7 @@
         "story_fr":  "Des milliers de moteurs, tous pressés d’aller quelque part.\nJe suis resté immobile au coin de la rue, et j’ai laissé la ville couler devant moi."
     },
     {
-        "n":  "01",
+        "n":  "21",
         "slug":  "twice-upon-a-time",
         "file":  "FR-PH-01_twice-upon-a-time.jpg",
         "src":  "img/photographs/edited/2400/FR-PH-01_twice-upon-a-time.jpg",
@@ -225,7 +315,7 @@
         "story_fr":  "Je les ai photographiées ensemble.\nCe n’est que des années plus tard que j’ai compris qu’elles étaient jumelles.\nParfois, une photographie sait quelque chose avant celle qui l’a prise."
     },
     {
-        "n":  "03",
+        "n":  "22",
         "slug":  "the-women-who-were-there",
         "file":  "FR-PH-03_the-women-who-were-there.jpg",
         "src":  "img/photographs/edited/2400/FR-PH-03_the-women-who-were-there.jpg",
@@ -240,7 +330,7 @@
         "story_fr":  "Je ne connais pas leurs histoires. Mais pendant une fraction de seconde, nos vies se sont croisées. Et toutes ces années plus tard, elles sont toujours là."
     },
     {
-        "n":  "04",
+        "n":  "23",
         "slug":  "the-city-rests-where-it-can",
         "file":  "FR-PH-04_the-city-rests-where-it-can.jpg",
         "src":  "img/photographs/edited/2400/FR-PH-04_the-city-rests-where-it-can.jpg",
@@ -255,7 +345,7 @@
         "story_fr":  "Dans une ville qui ne semblait jamais s’arrêter, il avait trouvé où rester immobile."
     },
     {
-        "n":  "05",
+        "n":  "24",
         "slug":  "the-night-writes-back",
         "file":  "FR-PH-05_the-night-writes-back.jpg",
         "src":  "img/photographs/edited/2400/FR-PH-05_the-night-writes-back.jpg",
@@ -270,7 +360,7 @@
         "story_fr":  "L’appareil n’a pas su retenir la ville. Ce qui ressemblait à une erreur est devenu une autre manière de voir."
     },
     {
-        "n":  "07",
+        "n":  "25",
         "slug":  "walking-together",
         "file":  "FR-PH-07_walking-together.jpg",
         "src":  "img/photographs/edited/2400/FR-PH-07_walking-together.jpg",
@@ -285,39 +375,7 @@
         "story_fr":  "Un instant, un autre temps a semblé traverser le présent."
     },
     {
-        "n":  "14",
-        "slug":  "where-the-coast-remembers",
-        "file":  "FR-PH-14_where-the-coast-remembers.jpg",
-        "src":  "",
-        "missing":  true,
-        "title":  "WHERE THE COAST REMEMBERS",
-        "alt":  "A landscape of palm trees along the coast",
-        "place_en":  "Coastal landscape",
-        "place_fr":  "Paysage côtier",
-        "year":  "2010",
-        "vertical":  false,
-        "ratio":  "16/9",
-        "story_en":  "The palms lean the way the wind taught them. A landscape also keeps the memory of everything that passed through it.",
-        "story_fr":  "Les palmiers penchent comme le vent le leur a appris. Un paysage garde aussi la mémoire de tout ce qui l’a traversé."
-    },
-    {
-        "n":  "17",
-        "slug":  "the-green-between-us",
-        "file":  "FR-PH-17_the-green-between-us.jpg",
-        "src":  "",
-        "missing":  true,
-        "title":  "THE GREEN BETWEEN US",
-        "alt":  "A luminous composition of foliage",
-        "place_en":  "Foliage study",
-        "place_fr":  "Étude végétale",
-        "year":  "2010",
-        "vertical":  false,
-        "ratio":  "4/3",
-        "story_en":  "Light passing through leaves. Nothing else happened. It was enough.",
-        "story_fr":  "La lumière à travers les feuilles. Rien d’autre ne s’est passé. C’était assez."
-    },
-    {
-        "n":  "18",
+        "n":  "26",
         "slug":  "strangers-in-passing",
         "file":  "FR-PH-18_strangers-in-passing.jpg",
         "src":  "img/photographs/edited/2400/FR-PH-18_strangers-in-passing.jpg",
@@ -332,7 +390,7 @@
         "story_fr":  "Aucun d’eux ne m’a vue. Pendant une seconde, ils ont tous appartenu à la même image."
     },
     {
-        "n":  "21",
+        "n":  "27",
         "slug":  "the-moment-between-moments",
         "file":  "FR-PH-21_the-moment-between-moments.jpg",
         "src":  "img/photographs/edited/2400/FR-PH-21_the-moment-between-moments.jpg",
@@ -347,7 +405,7 @@
         "story_fr":  "Rien de décisif ne se passe ici. C’est peut-être cela, l’instant."
     },
     {
-        "n":  "23",
+        "n":  "28",
         "slug":  "the-world-can-wait",
         "file":  "FR-PH-23_the-world-can-wait.jpg",
         "src":  "img/photographs/edited/2400/FR-PH-23_the-world-can-wait.jpg",
@@ -362,7 +420,7 @@
         "story_fr":  "Sa moto était son lit, le guidon son oreiller.\nDerrière lui, la ville continuait de filer.\nIl avait décidé qu’elle pouvait attendre."
     },
     {
-        "n":  "24",
+        "n":  "29",
         "slug":  "everything-here-is-parked",
         "file":  "FR-PH-24_everything-here-is-parked.jpg",
         "src":  "img/photographs/edited/2400/FR-PH-24_everything-here-is-parked.jpg",
@@ -377,7 +435,7 @@
         "story_fr":  "Des dizaines de machines, alignées, qui attendent.\nL’une d’elles avait amené un homme.\nLui aussi attendait."
     },
     {
-        "n":  "25",
+        "n":  "30",
         "slug":  "the-wall-holds-us-up",
         "file":  "FR-PH-25_the-wall-holds-us-up.jpg",
         "src":  "img/photographs/edited/2400/FR-PH-25_the-wall-holds-us-up.jpg",
@@ -392,7 +450,7 @@
         "story_fr":  "Midi. Personne n’avait prévu de s’arrêter ensemble.\nLe mur l’a fait pour eux.\nL’un d’eux a levé les yeux et a ri."
     },
     {
-        "n":  "26",
+        "n":  "31",
         "slug":  "all-the-voices-of-the-street",
         "file":  "FR-PH-26_all-the-voices-of-the-street.jpg",
         "src":  "img/photographs/edited/2400/FR-PH-26_all-the-voices-of-the-street.jpg",
@@ -407,7 +465,7 @@
         "story_fr":  "Chaque appel, chaque lumière, chaque voix de la rue passait par ce seul poteau.\nJe n’en entendais rien.\nJe voyais tout."
     },
     {
-        "n":  "27",
+        "n":  "32",
         "slug":  "seen-through-the-knot",
         "file":  "FR-PH-27_seen-through-the-knot.jpg",
         "src":  "img/photographs/edited/2400/FR-PH-27_seen-through-the-knot.jpg",
@@ -422,7 +480,7 @@
         "story_fr":  "J’ai regardé la rue à travers les câbles, comme on regarde à travers des branches.\nLa vie était en bas, emmêlée et lumineuse."
     },
     {
-        "n":  "28",
+        "n":  "33",
         "slug":  "someone-knows-which-one",
         "file":  "FR-PH-28_someone-knows-which-one.jpg",
         "src":  "img/photographs/edited/2400/FR-PH-28_someone-knows-which-one.jpg",
@@ -435,5 +493,35 @@
         "ratio":  "16/9",
         "story_en":  "Thousands of wires, and one man on a ladder.\nSomehow, he knew which one.",
         "story_fr":  "Des milliers de fils, et un homme sur une échelle.\nIl savait, on ne sait comment, lequel était le bon."
+    },
+    {
+        "n":  "34",
+        "slug":  "saigon-between-the-walls",
+        "file":  "FR-PH-35_saigon-between-the-walls.jpg",
+        "src":  "img/photographs/edited/2400/FR-PH-35_saigon-between-the-walls.jpg",
+        "title":  "BETWEEN THE WALLS",
+        "alt":  "Teal apartment building and narrow alley in Saigon seen from an upper balcony",
+        "place_en":  "Saigon, Vietnam",
+        "place_fr":  "Saigon, Viêt Nam",
+        "year":  "2008",
+        "vertical":  false,
+        "ratio":  "4/3",
+        "story_en":  "High above the alley, the city holds its breath in layers of plaster, balconies and quiet light.",
+        "story_fr":  "Au-dessus de la ruelle, la ville retient son souffle entre façades, balcons et lumière calme."
+    },
+    {
+        "n":  "35",
+        "slug":  "two-green-cubs",
+        "file":  "FR-PH-36_two-green-cubs.jpg",
+        "src":  "img/photographs/edited/2400/FR-PH-36_two-green-cubs.jpg",
+        "title":  "TWO GREEN CUBS",
+        "alt":  "Two vintage green Honda Cub motorbikes parked side by side against a weathered wall, Saigon",
+        "place_en":  "Saigon, Vietnam",
+        "place_fr":  "Saigon, Viêt Nam",
+        "year":  "2008",
+        "vertical":  false,
+        "ratio":  "16/9",
+        "story_en":  "Two green machines resting against a flaking wall. Always ready to carry the city a little further.",
+        "story_fr":  "Deux machines vertes posées contre un mur usé. Toujours prêtes à porter la ville un peu plus loin."
     }
 ]
