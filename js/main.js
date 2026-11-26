@@ -1,6 +1,17 @@
-﻿
+
 
 document.addEventListener('DOMContentLoaded', () => {
+  if (document.fonts) {
+    document.fonts.ready.then(() => {
+      document.body.classList.add('fonts-loaded');
+    });
+    setTimeout(() => {
+      document.body.classList.add('fonts-loaded');
+    }, 250);
+  } else {
+    document.body.classList.add('fonts-loaded');
+  }
+
   const menuToggle = document.getElementById('menu-toggle');
   const menuClose = document.getElementById('menu-close');
   const menuOverlay = document.getElementById('menu-overlay');
