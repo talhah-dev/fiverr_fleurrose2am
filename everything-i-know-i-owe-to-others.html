@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -71,12 +71,22 @@
   </div>
 
   
-  <section style="min-height:85vh; box-sizing:border-box; padding:clamp(90px, 12vh, 150px) clamp(22px, 4vw, 64px) clamp(40px, 6vh, 80px); max-width:1180px; margin:0 auto; display:flex; flex-direction:column; justify-content:center; gap:24px;">
-    <span class="font-mono" style="font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:#8E8C86;">PARTICIPATORY ART · SOCIAL PRACTICE · POLAROID ARCHIVE</span>
-    <h1 class="font-marker" style="margin:0; font-size:clamp(32px, 6vw, 84px); line-height:1.02; max-width:18ch;">
-      EVERYTHING I KNOW I OWE TO OTHERS
-    </h1>
-    <p class="font-hand" style="margin:0; font-size:clamp(20px, 2.4vw, 30px); font-weight:700; color:#C9C6BE; max-width:44ch;">
+  <section id="eik-threshold" style="height:260vh; position:relative; background:#0E0E10;">
+    <div style="position:sticky; top:0; height:100vh; overflow:hidden; display:flex; align-items:center; justify-content:center;">
+      <div id="eik-door" aria-hidden="true" style="width:24vh; height:68vh; background:#F3EDE2; box-shadow:0 0 50px rgba(255,214,170,0.35), 0 0 220px 60px rgba(255,190,140,0.14); will-change:width,height;"></div>
+      <h1 style="position:absolute; inset:0; margin:0; box-sizing:border-box; padding:clamp(64px,11vh,120px) clamp(22px,4vw,64px) clamp(56px,9vh,96px); display:flex; flex-direction:column; justify-content:space-between; mix-blend-mode:difference; color:#F3F1EC; font-family:'Archivo',sans-serif; font-weight:600; font-size:clamp(42px,10vw,176px); line-height:0.84; letter-spacing:-0.045em; pointer-events:none;">
+        <span>EVERYTHING<br>I KNOW</span>
+        <span style="align-self:flex-end; text-align:right;">I OWE<br>TO OTHERS.</span>
+      </h1>
+      <div id="eik-veil" style="position:absolute; inset:0; pointer-events:none; mix-blend-mode:difference; color:#F3F1EC; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.16em;">
+        <span style="position:absolute; top:clamp(74px,11vh,120px); right:clamp(22px,4vw,64px); text-align:right; max-width:30ch; line-height:1.8;">PARTICIPATORY ART · POLAROID ARCHIVE<br>NEARLY 1,000 DAYS OF OPEN DOOR</span>
+        <span style="position:absolute; bottom:clamp(40px,8vh,80px); left:clamp(22px,4vw,64px);">COME IN &darr;</span>
+      </div>
+    </div>
+  </section>
+
+  <section style="box-sizing:border-box; padding:clamp(70px, 10vh, 120px) clamp(22px, 4vw, 64px) clamp(40px, 6vh, 80px); max-width:1180px; margin:0 auto; display:flex; flex-direction:column; justify-content:center; gap:24px;">
+    <p class="font-hand" style="margin:0; font-size:clamp(24px, 3.2vw, 44px); font-weight:700; color:#C9C6BE; max-width:34ch; line-height:1.15;">
       Some of the most important things I have learned were taught to me by people I had never met before.
     </p>
   </section>
@@ -161,5 +171,34 @@
   <script src="js/i18n.js"></script>
   <script src="js/inquiry.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const thr = document.getElementById('eik-threshold');
+      const door = document.getElementById('eik-door');
+      const veil = document.getElementById('eik-veil');
+      if (!thr || !door) return;
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) {
+        thr.style.height = '100vh';
+        door.style.width = '38vh';
+        door.style.height = '70vh';
+        return;
+      }
+      function onScroll() {
+        const vh = window.innerHeight;
+        const vw = window.innerWidth;
+        const r = thr.getBoundingClientRect();
+        const p = Math.min(1, Math.max(0, -r.top / Math.max(1, r.height - vh)));
+        const x = Math.min(1, Math.max(0, (p - 0.08) / 0.8));
+        const e = x * x * (3 - 2 * x);
+        door.style.width = (0.24 * vh + (vw - 0.24 * vh) * e) + 'px';
+        door.style.height = (0.68 * vh + 0.32 * vh * e) + 'px';
+        if (veil) veil.style.opacity = String(Math.max(0, 1 - p * 4));
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll);
+      onScroll();
+    });
+  </script>
 </body>
 </html>

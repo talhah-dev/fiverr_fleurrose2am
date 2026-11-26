@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -96,12 +96,12 @@
   </div>
 
   
-  <section style="min-height:100vh; box-sizing:border-box; padding:clamp(80px, 8vw, 120px) clamp(22px, 4vw, 64px) clamp(40px, 5vw, 64px); display:flex; flex-direction:column; justify-content:center; gap:4vh;">
+  <section id="intro-section" style="min-height:100vh; box-sizing:border-box; padding:clamp(80px, 8vw, 120px) clamp(22px, 4vw, 64px) clamp(40px, 5vw, 64px); display:flex; flex-direction:column; justify-content:center; gap:4vh; cursor:pointer;">
     <div class="font-mono" data-i18n="home.kicker" style="font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:#8E8C86;">Fleur Rose — art to stay alive</div>
-    <p class="font-marker" data-i18n="home.intro_text" style="margin:0; font-size:clamp(24px, 4.5vw, 76px); line-height:1.06; letter-spacing:-0.01em; max-width:24ch;">
+    <p id="intro-paragraph" class="font-marker" data-i18n="home.intro_text" style="margin:0; font-size:clamp(22px, 3.8vw, 60px); line-height:1.06; letter-spacing:-0.01em; text-wrap:pretty; opacity:0;">
       At home there were only two books, a Bible and the phone directory. Nobody ever showed me a painting, nobody told me you could make one. But beauty was always there, everywhere, all the time.
     </p>
-    <div style="display:flex; flex-wrap:wrap; gap:20px; align-items:center; margin-top:2vh;">
+    <div id="intro-actions" style="display:flex; flex-wrap:wrap; gap:20px; align-items:center; margin-top:2vh; transition:opacity 0.5s ease;">
       <a href="#paintings" class="font-marker" style="font-size:clamp(20px, 2.2vw, 28px); border-bottom:5px solid #F3F1EC; padding:6px 0; display:inline-block; transform:rotate(-1deg);" data-i18n="home.see_wall">see the wall</a>
       <a href="the-second-future.html" class="font-marker" style="font-size:clamp(20px, 2.2vw, 28px); border-bottom:5px solid #FF8FC7; color:#FF8FC7; padding:6px 0; display:inline-block; transform:rotate(1deg);">The Second Future →</a>
       <a href="mailto:hello@fleurrose2am.com" class="font-marker" style="font-size:clamp(20px, 2.2vw, 28px); border-bottom:5px solid #8E8C86; color:#8E8C86; padding:6px 0; display:inline-block;" data-i18n="home.talk_cta">Talk to me</a>
@@ -296,9 +296,116 @@
       document.body.style.overflow = '';
     }
 
+    let introStarted = false;
+    let introTimer = null;
+    let introWords = [];
+
     document.getElementById('modal-close-btn').addEventListener('click', closeArtworkModal);
-    window.addEventListener('langchange', renderPaintings);
-    document.addEventListener('DOMContentLoaded', loadPaintings);
+    window.addEventListener('langchange', () => {
+      renderPaintings();
+      if (!introStarted) {
+        introStarted = true;
+        startIntroAnimation();
+      } else {
+        stopIntroAnimation();
+      }
+    });
+    document.addEventListener('DOMContentLoaded', () => {
+      loadPaintings();
+      setTimeout(() => {
+        if (!introStarted) {
+          introStarted = true;
+          startIntroAnimation();
+        }
+      }, 450);
+    });
+
+    function stopIntroAnimation() {
+      if (introTimer) {
+        clearTimeout(introTimer);
+        introTimer = null;
+      }
+      const node = document.getElementById('intro-paragraph');
+      if (node) node.style.opacity = '1';
+      introWords.forEach((s) => {
+        s.style.opacity = '1';
+        s.style.transform = `rotate(${s.dataset.rest || 0}deg)`;
+      });
+      const actions = document.getElementById('intro-actions');
+      if (actions) actions.style.opacity = '1';
+      const sec = document.getElementById('intro-section');
+      if (sec) sec.style.cursor = 'default';
+    }
+
+    function startIntroAnimation() {
+      const node = document.getElementById('intro-paragraph');
+      const sec = document.getElementById('intro-section');
+      if (!node || !sec) return;
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) {
+        node.style.opacity = '1';
+        return;
+      }
+
+      const text = node.textContent.trim();
+      if (!text) {
+        node.style.opacity = '1';
+        return;
+      }
+
+      node.textContent = '';
+      node.style.opacity = '1';
+      introWords = [];
+      text.split(/(\s+)/).forEach((tok) => {
+        if (!tok) return;
+        if (/^\s+$/.test(tok)) {
+          node.appendChild(document.createTextNode(tok));
+          return;
+        }
+        const s = document.createElement('span');
+        s.className = 'word-token';
+        s.textContent = tok;
+        const rest = (Math.random() * 1.4 - 0.7).toFixed(2);
+        s.dataset.rest = rest;
+        s.style.opacity = '0';
+        s.style.transform = 'translateY(0.14em) rotate(-3deg) scale(0.92)';
+        introWords.push(s);
+        node.appendChild(s);
+      });
+
+      const actions = document.getElementById('intro-actions');
+      if (actions) actions.style.opacity = '0';
+
+      sec.addEventListener('click', (e) => {
+        if (e.target.closest('a')) return;
+        stopIntroAnimation();
+      }, { once: true });
+
+      const base = 65;
+      let i = 0;
+      const writeNext = () => {
+        if (i >= introWords.length) {
+          stopIntroAnimation();
+          return;
+        }
+        const s = introWords[i++];
+        s.style.opacity = '1';
+        s.style.transform = `rotate(${s.dataset.rest}deg)`;
+        const w = s.textContent;
+        let d = base * (0.45 + Math.min(w.length, 10) * 0.06);
+        if (/[.!?…]$/.test(w)) d += base * 2.2;
+        else if (/[,;:»]$/.test(w)) d += base * 1.1;
+        d *= 0.8 + Math.random() * 0.4;
+        introTimer = setTimeout(writeNext, d);
+      };
+
+      const kick = () => { introTimer = setTimeout(writeNext, 200); };
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(kick);
+      } else {
+        kick();
+      }
+    }
   </script>
 </body>
 </html>
