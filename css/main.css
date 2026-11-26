@@ -50,6 +50,19 @@ a:hover {
   color: var(--text-subtle);
 }
 
+a[href^="mailto:"]:hover,
+#inq-copy-fallback:hover {
+  color: #FF8FC7 !important;
+  border-color: #FF8FC7 !important;
+}
+
+#modal-inquire-btn:hover,
+#btn-order-email:hover,
+#sf-modal-reserve:hover {
+  background: #FF8FC7 !important;
+  color: #0E0E10 !important;
+}
+
 ::selection {
   background: var(--text-main);
   color: var(--bg-color);
