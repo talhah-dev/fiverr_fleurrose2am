@@ -64,4 +64,16 @@ document.addEventListener('DOMContentLoaded', () => {
   if ('scrollRestoration' in history) {
     history.scrollRestoration = 'auto';
   }
+
+  const currentPath = (window.location.pathname.split('/').pop() || 'index.html').replace(/\.html$/, '') || 'index';
+  document.querySelectorAll('#menu-overlay a, footer a').forEach(link => {
+    const href = link.getAttribute('href');
+    if (!href) return;
+    const linkPage = (href.split('#')[0] || 'index.html').replace(/\.html$/, '') || 'index';
+    if (linkPage === currentPath) {
+      link.classList.add('active-page-link');
+    } else {
+      link.classList.remove('active-page-link');
+    }
+  });
 });
