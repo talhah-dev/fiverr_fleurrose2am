@@ -1,5 +1,5 @@
 const PUBLIC_EMAIL = 'hello@fleurrose2am.com';
-const WEB3FORMS_KEY = '07353104-1f37-4618-8f62-bf76f3a1ebe1';
+const WEB3FORMS_KEY = '39a6afd9-8b2b-4b77-8577-574eb9349576';
 
 function showToast(message = 'Email copied to clipboard!') {
   let toast = document.getElementById('copy-toast');
