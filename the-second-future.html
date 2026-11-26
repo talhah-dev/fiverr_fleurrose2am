@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -19,7 +19,7 @@
   <link rel="preload" href="fonts/Archivo-400-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/Gaegu-700-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/JetBrainsMono-400-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/main.css?v=9">
+  <link rel="stylesheet" href="css/main.css?v=11">
   
   <script type="application/ld+json">
   {
@@ -135,22 +135,27 @@
 
   
   <section id="scale" style="padding:clamp(80px, 12vh, 140px) clamp(22px, 4vw, 64px); border-top:1px solid #2A2A2E; background:#121214;">
-    <div style="max-width:1100px; margin:0 auto; display:flex; flex-direction:column; gap:24px;">
+    <div style="max-width:1100px; margin:0 auto; display:flex; flex-direction:column; gap:20px;">
       <div>
         <span class="font-mono" style="font-size:11px; letter-spacing:0.16em; color:#8E8C86;" data-i18n="second_future.scale_k">SCALE VISUALISATION · SIMULATION</span>
         <h2 class="font-marker" style="margin:8px 0 0; font-size:clamp(26px, 3.5vw, 44px); font-weight:normal;" data-i18n="second_future.scale_h">On a wall, at its real size.</h2>
+        <p id="mockup-active-label" class="font-mono" style="margin:8px 0 0; font-size:11.5px; color:#FF8FC7; letter-spacing:0.08em;">TWICE UPON A TIME · 45 × 25 CM</p>
       </div>
 
-      
-      <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:16px;">
-        <div style="display:flex; gap:12px;">
-          <button type="button" id="mockup-size-30" class="font-mono" style="background:#0E0E10; border:1px solid #3A3A3F; color:#F3F1EC; padding:8px 14px; font-size:11px; cursor:pointer;">30 CM PRINT</button>
-          <button type="button" id="mockup-size-45" class="font-mono" style="background:#F3F1EC; border:1px solid #F3F1EC; color:#0E0E10; padding:8px 14px; font-size:11px; cursor:pointer;">45 CM PRINT</button>
+      <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:12px;">
+        <div style="display:flex; flex-wrap:wrap; gap:8px;">
+          <button type="button" id="mockup-size-30" class="font-mono" style="background:#0E0E10; border:1px solid #3A3A3F; color:#F3F1EC; padding:8px 14px; font-size:11px; cursor:pointer;">30 CM</button>
+          <button type="button" id="mockup-size-45" class="font-mono" style="background:#F3F1EC; border:1px solid #F3F1EC; color:#0E0E10; padding:8px 14px; font-size:11px; cursor:pointer;">45 CM</button>
+          <button type="button" id="mockup-toggle-frame" class="font-mono" style="background:none; border:1px solid #F3F1EC; color:#F3F1EC; padding:8px 14px; font-size:11px; cursor:pointer;">FRAMED</button>
         </div>
-        <button type="button" id="mockup-toggle-frame" class="font-mono" style="background:none; border:1px solid #F3F1EC; color:#F3F1EC; padding:8px 14px; font-size:11px; cursor:pointer;">TOGGLE FRAME</button>
+        <div style="display:flex; flex-wrap:wrap; gap:8px; align-items:center;">
+          <span class="font-mono" style="font-size:10px; color:#8E8C86; letter-spacing:0.12em;">WALL:</span>
+          <button type="button" class="wall-color-btn" data-wall="#E8E4DC" aria-label="Warm Plaster" style="width:24px; height:24px; border-radius:50%; border:2px solid #FF8FC7; background:#E8E4DC; cursor:pointer;"></button>
+          <button type="button" class="wall-color-btn" data-wall="#252529" aria-label="Dark Gallery" style="width:24px; height:24px; border-radius:50%; border:2px solid #3A3A3F; background:#252529; cursor:pointer;"></button>
+          <button type="button" class="wall-color-btn" data-wall="#C5CEC4" aria-label="Soft Sage" style="width:24px; height:24px; border-radius:50%; border:2px solid #3A3A3F; background:#C5CEC4; cursor:pointer;"></button>
+        </div>
       </div>
 
-      
       <div id="room-simulator" class="mockup-container">
         <div class="mockup-watermark">SIMULATION · 3M WALL</div>
         <div class="mockup-wall">
@@ -158,11 +163,56 @@
             <img class="mockup-artwork-img" src="img/photographs/edited/2400/FR-PH-01_twice-upon-a-time.jpg" alt="Twice Upon a Time" style="display:block; width:100%; height:100%; object-fit:contain;">
           </div>
         </div>
-        <div class="mockup-sofa"></div>
+        <div class="mockup-sofa-wrap">
+          <div class="mockup-sofa-back"></div>
+          <div class="mockup-sofa-seat"></div>
+          <div class="mockup-sofa-legs"></div>
+        </div>
+        <div class="mockup-floor"></div>
       </div>
-      <p class="font-mono" style="margin:0; font-size:11px; color:#8E8C86; text-align:center;">Proportional architectural illustration against a 200 cm sofa and a 3 m wall. Not a composite photograph.</p>
+
+      <div id="mockup-thumbs" class="mockup-thumbs" aria-label="Choose photograph for wall preview"></div>
+      <p class="font-mono" style="margin:0; font-size:11px; color:#8E8C86; text-align:center;">Select any thumbnail above to hang it on the wall. Proportional illustration against a 200 cm sofa and 3 m wall.</p>
     </div>
   </section>
+
+  <div id="sf-detail-modal" class="modal-backdrop" role="dialog" aria-modal="true" style="display:none;">
+    <div style="position:sticky; top:0; z-index:10; display:flex; justify-content:space-between; align-items:center; padding:14px clamp(16px, 4vw, 52px); background:rgba(14,14,16,0.95); border-bottom:1px solid #2A2A2E; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:0.14em;">
+      <span id="sf-modal-code" style="color:#FF8FC7;">FR-PH-01</span>
+      <div style="display:flex; align-items:center; gap:12px;">
+        <button type="button" id="sf-modal-prev" aria-label="Previous photograph" style="background:none; border:1px solid #3A3A3F; color:#F3F1EC; cursor:pointer; font:inherit; padding:6px 12px;">&larr;</button>
+        <button type="button" id="sf-modal-next" aria-label="Next photograph" style="background:none; border:1px solid #3A3A3F; color:#F3F1EC; cursor:pointer; font:inherit; padding:6px 12px;">&rarr;</button>
+        <button type="button" id="sf-modal-close" aria-label="Close" style="background:none; border:0; color:#F3F1EC; cursor:pointer; padding:6px; display:inline-flex; align-items:center;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+    <div style="max-width:1200px; margin:0 auto; padding:24px clamp(20px, 4vw, 64px) 72px; display:flex; flex-direction:column; gap:32px;">
+      <div style="display:flex; justify-content:center; background:#17171A;">
+        <img id="sf-modal-img" src="" alt="" style="display:block; max-width:100%; max-height:78vh; object-fit:contain;">
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap:32px 56px; align-items:start;">
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <h2 id="sf-modal-title" class="font-marker" style="margin:0; font-size:clamp(28px, 4vw, 48px); line-height:1.02;">TITLE</h2>
+          <span id="sf-modal-meta" class="font-mono" style="font-size:11px; letter-spacing:0.12em; color:#8E8C86;">SAIGON · 2008</span>
+          <p id="sf-modal-story" class="font-hand" style="margin:8px 0 0; font-size:clamp(20px, 2.2vw, 27px); font-weight:700; line-height:1.38; color:#E2DFD8; white-space:pre-line;"></p>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:16px; border:1px solid #2A2A2E; background:#17171A; padding:24px;">
+          <span class="font-mono" style="font-size:10.5px; letter-spacing:0.14em; color:#8E8C86;">EDITION · MAX 30 NUMBERED PRINTS</span>
+          <div style="display:flex; gap:10px;">
+            <button type="button" id="sf-fmt-30" class="font-mono" style="flex:1; background:#0E0E10; border:1px solid #3A3A3F; color:#F3F1EC; padding:10px; font-size:11px; cursor:pointer;">30 CM (LONG SIDE)</button>
+            <button type="button" id="sf-fmt-45" class="font-mono" style="flex:1; background:#F3F1EC; border:1px solid #F3F1EC; color:#0E0E10; padding:10px; font-size:11px; cursor:pointer; font-weight:600;">45 CM (LONG SIDE)</button>
+          </div>
+          <p id="sf-modal-dpi" class="font-mono" style="margin:0; font-size:11px; line-height:1.65; color:#8E8C86;"></p>
+          <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:6px;">
+            <a id="sf-modal-reserve" href="mailto:hello@fleurrose2am.com" style="flex:1 1 auto; text-align:center; background:#F3F1EC; color:#0E0E10; padding:14px 20px; font-family:'JetBrains Mono',monospace; font-size:11.5px; font-weight:600; letter-spacing:0.12em; text-decoration:none;">RESERVE THIS PRINT &rarr;</a>
+            <button type="button" id="sf-modal-wall" class="font-mono" style="flex:1 1 auto; background:none; border:1px solid #F3F1EC; color:#F3F1EC; padding:13px 18px; font-size:11px; letter-spacing:0.12em; cursor:pointer;">SEE IT ON A WALL</button>
+          </div>
+          <p class="font-mono" style="margin:0; font-size:10.5px; color:#8E8C86;">Selected individually for each artwork — details upon request. Bank transfer only.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
   
   <section id="order" style="padding:clamp(60px, 10vh, 120px) clamp(22px, 4vw, 64px); background:#17171A; border-top:1px solid #2A2A2E;">
@@ -219,25 +269,31 @@
   </footer>
 
   <script src="js/i18n.js?v=8"></script>
-  <script src="js/inquiry.js?v=6"></script>
-  <script src="js/mockup.js"></script>
-  <script src="js/main.js?v=2"></script>
+  <script src="js/inquiry.js?v=11"></script>
+  <script src="js/mockup.js?v=10"></script>
+  <script src="js/main.js?v=11"></script>
   <script>
     let secondFutureData = [];
     let simulator = null;
+    let activeMockupIdx = 0;
+    let activeModalIdx = 0;
+    let activeFormatCm = 45;
 
     async function initSecondFuture() {
       try {
         const res = await fetch('data/second-future.json');
         secondFutureData = await res.json();
         renderWorks();
+        renderMockupThumbs();
         populateSelect();
 
         simulator = new RoomSimulator('room-simulator', {
           framed: true,
           widthCm: 45,
-          ratio: 16 / 9
+          ratio: 16 / 9,
+          title: secondFutureData[0]?.title || ''
         });
+        updateMockupLabel(0);
       } catch (err) {
         console.error('Failed to init The Second Future', err);
       }
@@ -252,15 +308,16 @@
         const story = w[lang] || w.en;
         return `
           <div id="${w.slug}" style="display:flex; flex-direction:column; gap:20px;">
-            <div style="width:100%; aspect-ratio:${w.ratio}; background:#17171A; overflow:hidden;">
-              <img src="${w.src}" alt="${w.alt}" loading="lazy" style="width:100%; height:100%; object-fit:contain; display:block;">
+            <div onclick="openSfModal(${idx})" style="width:100%; aspect-ratio:${w.ratio}; background:#17171A; overflow:hidden; cursor:zoom-in;">
+              <img src="${w.src}" alt="${w.alt}" loading="lazy" style="width:100%; height:100%; object-fit:contain; display:block; transition:transform 0.35s ease;" onmouseover="this.style.transform='scale(1.015)'" onmouseout="this.style.transform='scale(1)'">
             </div>
             <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline; gap:16px;">
-              <div>
+              <div onclick="openSfModal(${idx})" style="cursor:pointer;">
                 <h3 class="font-hand" style="margin:0; font-size:clamp(22px, 2.5vw, 32px); font-weight:700;">${w.title}</h3>
                 <span class="font-mono" style="font-size:11px; color:#8E8C86;">${w.code} · SAIGON, ${w.date}</span>
               </div>
-              <div style="display:flex; gap:12px;">
+              <div style="display:flex; flex-wrap:wrap; gap:10px;">
+                <button type="button" class="font-mono" style="background:none; border:1px solid #3A3A3F; color:#C9C6BE; padding:6px 12px; font-size:11px; cursor:pointer;" onclick="openSfModal(${idx})">ENLARGE</button>
                 <button type="button" class="font-mono" style="background:none; border:1px solid #3A3A3F; color:#C9C6BE; padding:6px 12px; font-size:11px; cursor:pointer;" onclick="previewInMockup(${idx})">VIEW ON WALL</button>
                 <a href="${window.Inquiry.mailto(`Reservation: ${w.title} (${w.code})`)}" class="font-mono" style="background:#F3F1EC; color:#0E0E10; padding:6px 14px; font-size:11px; text-decoration:none; font-weight:600;">RESERVE</a>
               </div>
@@ -269,6 +326,73 @@
           </div>
         `;
       }).join('');
+    }
+
+    function renderMockupThumbs() {
+      const wrap = document.getElementById('mockup-thumbs');
+      if (!wrap) return;
+      wrap.innerHTML = secondFutureData.map((w, idx) => `
+        <button type="button" class="mockup-thumb-btn ${idx === activeMockupIdx ? 'active' : ''}" onclick="selectMockupThumb(${idx})" aria-label="Preview ${w.title} on wall" title="${w.title}">
+          <img src="${w.src}" alt="${w.title}" loading="lazy" style="width:100%; height:100%; object-fit:cover; display:block;">
+        </button>
+      `).join('');
+    }
+
+    function updateMockupLabel(idx) {
+      const w = secondFutureData[idx];
+      const lbl = document.getElementById('mockup-active-label');
+      if (!w || !lbl || !simulator) return;
+      const cm = simulator.currentWidthCm;
+      const ratioParts = w.ratio.split('/');
+      const hCm = Math.round((cm * Number(ratioParts[1])) / Number(ratioParts[0]));
+      const dimTxt = w.r[0] < w.r[1] ? `${hCm} × ${cm} CM` : `${cm} × ${hCm} CM`;
+      lbl.textContent = `${w.title} · ${dimTxt} · ${simulator.isFramed ? 'FRAMED' : 'UNFRAMED'}`;
+    }
+
+    function selectMockupThumb(idx) {
+      const w = secondFutureData[idx];
+      if (!simulator || !w) return;
+      activeMockupIdx = idx;
+      simulator.setArtwork(w.src, w.title, simulator.currentWidthCm, w.r[0] / w.r[1]);
+      updateMockupLabel(idx);
+      document.querySelectorAll('.mockup-thumb-btn').forEach((btn, i) => {
+        btn.classList.toggle('active', i === idx);
+      });
+    }
+
+    function openSfModal(idx) {
+      activeModalIdx = idx;
+      renderSfModal();
+      const modal = document.getElementById('sf-detail-modal');
+      if (modal) {
+        modal.style.display = 'block';
+        document.documentElement.classList.add('modal-open');
+        document.body.classList.add('modal-open');
+      }
+    }
+
+    function closeSfModal() {
+      const modal = document.getElementById('sf-detail-modal');
+      if (modal) modal.style.display = 'none';
+      document.documentElement.classList.remove('modal-open');
+      document.body.classList.remove('modal-open');
+    }
+
+    function renderSfModal() {
+      const w = secondFutureData[activeModalIdx];
+      if (!w) return;
+      const lang = window.I18N ? window.I18N.getLang() : 'en';
+      document.getElementById('sf-modal-code').textContent = w.code;
+      document.getElementById('sf-modal-img').src = w.src;
+      document.getElementById('sf-modal-img').alt = w.alt;
+      document.getElementById('sf-modal-title').textContent = w.title;
+      document.getElementById('sf-modal-meta').textContent = `SAIGON · ${w.date}${w.award ? ' · READERS’ CHOICE, BAT CARRÉ, 2014' : ''}`;
+      document.getElementById('sf-modal-story').textContent = w[lang] || w.en;
+      const dpi = Math.round(w.px / (activeFormatCm / 2.54));
+      document.getElementById('sf-modal-dpi').textContent = lang === 'fr'
+        ? `Depuis un original de ${w.px} px : à ${activeFormatCm} cm au grand côté, le tirage garde environ ${dpi} points par pouce.`
+        : `From a ${w.px} px original: at ${activeFormatCm} cm on the long side, the print keeps about ${dpi} dots per inch.`;
+      document.getElementById('sf-modal-reserve').href = window.Inquiry.mailto(`Reservation: ${w.title} (${w.code}) — ${activeFormatCm} cm`);
     }
 
     function populateSelect() {
@@ -289,32 +413,88 @@
     }
 
     function previewInMockup(idx) {
-      const w = secondFutureData[idx];
-      if (simulator && w) {
-        simulator.setArtwork(w.src, w.title, 45, eval(w.ratio));
-        document.getElementById('scale').scrollIntoView({ behavior: 'smooth' });
-      }
+      selectMockupThumb(idx);
+      document.getElementById('scale').scrollIntoView({ behavior: 'smooth' });
     }
 
-    document.getElementById('mockup-toggle-frame')?.addEventListener('click', () => {
-      if (simulator) simulator.toggleFramed();
+    document.getElementById('sf-modal-close')?.addEventListener('click', closeSfModal);
+    document.getElementById('sf-modal-prev')?.addEventListener('click', () => {
+      activeModalIdx = (activeModalIdx - 1 + secondFutureData.length) % secondFutureData.length;
+      renderSfModal();
+    });
+    document.getElementById('sf-modal-next')?.addEventListener('click', () => {
+      activeModalIdx = (activeModalIdx + 1) % secondFutureData.length;
+      renderSfModal();
+    });
+    document.getElementById('sf-modal-wall')?.addEventListener('click', () => {
+      closeSfModal();
+      previewInMockup(activeModalIdx);
+    });
+    document.getElementById('sf-fmt-30')?.addEventListener('click', function() {
+      activeFormatCm = 30;
+      this.style.background = '#F3F1EC'; this.style.color = '#0E0E10';
+      const b45 = document.getElementById('sf-fmt-45');
+      if (b45) { b45.style.background = '#0E0E10'; b45.style.color = '#F3F1EC'; }
+      renderSfModal();
+    });
+    document.getElementById('sf-fmt-45')?.addEventListener('click', function() {
+      activeFormatCm = 45;
+      this.style.background = '#F3F1EC'; this.style.color = '#0E0E10';
+      const b30 = document.getElementById('sf-fmt-30');
+      if (b30) { b30.style.background = '#0E0E10'; b30.style.color = '#F3F1EC'; }
+      renderSfModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      const modal = document.getElementById('sf-detail-modal');
+      if (!modal || modal.style.display !== 'block') return;
+      if (e.key === 'Escape') closeSfModal();
+      if (e.key === 'ArrowRight') {
+        activeModalIdx = (activeModalIdx + 1) % secondFutureData.length;
+        renderSfModal();
+      }
+      if (e.key === 'ArrowLeft') {
+        activeModalIdx = (activeModalIdx - 1 + secondFutureData.length) % secondFutureData.length;
+        renderSfModal();
+      }
+    });
+
+    document.getElementById('mockup-toggle-frame')?.addEventListener('click', function() {
+      if (simulator) {
+        simulator.toggleFramed();
+        this.textContent = simulator.isFramed ? 'FRAMED' : 'UNFRAMED';
+        updateMockupLabel(activeMockupIdx);
+      }
     });
 
     document.getElementById('mockup-size-30')?.addEventListener('click', function() {
       this.style.background = '#F3F1EC'; this.style.color = '#0E0E10';
       const b45 = document.getElementById('mockup-size-45');
       if (b45) { b45.style.background = '#0E0E10'; b45.style.color = '#F3F1EC'; }
-      if (simulator) { simulator.currentWidthCm = 30; simulator.render(); }
+      if (simulator) { simulator.currentWidthCm = 30; simulator.render(); updateMockupLabel(activeMockupIdx); }
     });
 
     document.getElementById('mockup-size-45')?.addEventListener('click', function() {
       this.style.background = '#F3F1EC'; this.style.color = '#0E0E10';
       const b30 = document.getElementById('mockup-size-30');
       if (b30) { b30.style.background = '#0E0E10'; b30.style.color = '#F3F1EC'; }
-      if (simulator) { simulator.currentWidthCm = 45; simulator.render(); }
+      if (simulator) { simulator.currentWidthCm = 45; simulator.render(); updateMockupLabel(activeMockupIdx); }
     });
 
-    window.addEventListener('langchange', renderWorks);
+    document.querySelectorAll('.wall-color-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const hex = btn.getAttribute('data-wall');
+        if (simulator && hex) simulator.setWallColor(hex);
+        document.querySelectorAll('.wall-color-btn').forEach(b => b.style.borderColor = '#3A3A3F');
+        btn.style.borderColor = '#FF8FC7';
+      });
+    });
+
+    window.addEventListener('langchange', () => {
+      renderWorks();
+      const modal = document.getElementById('sf-detail-modal');
+      if (modal && modal.style.display === 'block') renderSfModal();
+    });
     document.addEventListener('DOMContentLoaded', initSecondFuture);
   </script>
 </body>

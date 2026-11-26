@@ -19,14 +19,16 @@ document.addEventListener('DOMContentLoaded', () => {
   function openMenu() {
     if (menuOverlay) {
       menuOverlay.classList.add('active');
-      document.body.style.overflow = 'hidden';
+      document.documentElement.classList.add('modal-open');
+      document.body.classList.add('modal-open');
     }
   }
 
   function closeMenu() {
     if (menuOverlay) {
       menuOverlay.classList.remove('active');
-      document.body.style.overflow = '';
+      document.documentElement.classList.remove('modal-open');
+      document.body.classList.remove('modal-open');
     }
   }
 

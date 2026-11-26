@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -22,7 +22,7 @@
   <link rel="preload" href="fonts/Archivo-400-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/Gaegu-700-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/JetBrainsMono-400-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/main.css?v=9">
+  <link rel="stylesheet" href="css/main.css?v=11">
   
   
   <script type="application/ld+json">
@@ -206,8 +206,8 @@
 
   
   <script src="js/i18n.js?v=8"></script>
-  <script src="js/inquiry.js?v=6"></script>
-  <script src="js/main.js?v=2"></script>
+  <script src="js/inquiry.js?v=11"></script>
+  <script src="js/main.js?v=11"></script>
   <script>
     let paintingsData = [];
     async function loadPaintings() {
@@ -300,13 +300,15 @@
 
       const modal = document.getElementById('artwork-modal');
       modal.style.display = 'block';
-      document.body.style.overflow = 'hidden';
+      document.documentElement.classList.add('modal-open');
+      document.body.classList.add('modal-open');
     }
 
     function closeArtworkModal() {
       const modal = document.getElementById('artwork-modal');
       if (modal) modal.style.display = 'none';
-      document.body.style.overflow = '';
+      document.documentElement.classList.remove('modal-open');
+      document.body.classList.remove('modal-open');
     }
 
     let introStarted = false;

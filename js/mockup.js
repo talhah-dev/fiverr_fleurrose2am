@@ -1,16 +1,13 @@
-﻿
-
 class RoomSimulator {
   constructor(containerId, options = {}) {
     this.container = document.getElementById(containerId);
     if (!this.container) return;
     this.artworkImg = this.container.querySelector('.mockup-artwork-img');
     this.frameEl = this.container.querySelector('.mockup-frame');
-    this.captionEl = this.container.querySelector('.mockup-caption');
     this.isFramed = options.framed !== undefined ? options.framed : true;
     this.currentWidthCm = options.widthCm || 45;
     this.currentRatio = options.ratio || (16 / 9);
-
+    this.currentTitle = options.title || '';
     this.render();
   }
 
@@ -19,9 +16,16 @@ class RoomSimulator {
       this.artworkImg.src = src;
       this.artworkImg.alt = title;
     }
+    this.currentTitle = title;
     this.currentWidthCm = widthCm;
     this.currentRatio = ratio;
     this.render();
+  }
+
+  setWallColor(hex) {
+    if (this.container) {
+      this.container.style.background = hex;
+    }
   }
 
   toggleFramed() {
@@ -37,7 +41,9 @@ class RoomSimulator {
       this.frameEl.classList.remove('framed');
     }
 
-    const widthPercent = Math.min(60, Math.max(15, (this.currentWidthCm / 300) * 100 * 1.3));
+    const isPortrait = this.currentRatio < 1;
+    const effectiveWidthCm = isPortrait ? (this.currentWidthCm * this.currentRatio) : this.currentWidthCm;
+    const widthPercent = Math.min(48, Math.max(9, (effectiveWidthCm / 300) * 100 * 1.15));
     this.frameEl.style.width = `${widthPercent}%`;
     this.frameEl.style.aspectRatio = `${this.currentRatio}`;
   }

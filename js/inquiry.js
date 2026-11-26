@@ -186,7 +186,8 @@ function openInquiryModal(subjectText = '') {
 
   const modal = document.getElementById('inquiry-modal');
   modal.classList.add('open');
-  document.body.style.overflow = 'hidden';
+  document.documentElement.classList.add('modal-open');
+  document.body.classList.add('modal-open');
 
   setTimeout(() => {
     const nameInput = document.getElementById('inq-field-name');
@@ -198,7 +199,11 @@ function closeInquiryModal() {
   const modal = document.getElementById('inquiry-modal');
   if (modal) {
     modal.classList.remove('open');
-    document.body.style.overflow = '';
+    const otherModalOpen = (document.getElementById('artwork-modal')?.style.display === 'block') || (document.getElementById('sf-detail-modal')?.style.display === 'block');
+    if (!otherModalOpen) {
+      document.documentElement.classList.remove('modal-open');
+      document.body.classList.remove('modal-open');
+    }
   }
 }
 
