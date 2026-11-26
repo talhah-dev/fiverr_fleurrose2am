@@ -355,6 +355,86 @@ a:hover {
   transition: opacity 0.24s ease-out, transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+.inquiry-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 150;
+  background: rgba(14, 14, 16, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.inquiry-modal-backdrop.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.inquiry-modal-card {
+  width: 100%;
+  max-width: 540px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #0E0E10;
+  border: 2px solid #F3F1EC;
+  padding: clamp(24px, 4vw, 36px);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.75);
+  transform: translateY(14px) scale(0.98);
+  transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.inquiry-modal-backdrop.open .inquiry-modal-card {
+  transform: translateY(0) scale(1);
+}
+
+.inquiry-input {
+  width: 100%;
+  background: #17171A;
+  color: #F3F1EC;
+  border: 1px solid #3A3A3F;
+  padding: 12px 14px;
+  font-family: 'Archivo', sans-serif;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.inquiry-input:focus {
+  border-color: #FF8FC7;
+}
+
+.inquiry-btn-submit {
+  background: #F3F1EC;
+  color: #0E0E10;
+  border: 0;
+  padding: 15px 24px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.inquiry-btn-submit:hover {
+  background: #FF8FC7;
+  color: #0E0E10;
+}
+
+.inquiry-btn-submit:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
